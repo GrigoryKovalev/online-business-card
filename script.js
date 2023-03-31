@@ -25,7 +25,7 @@ $(function () {
 	});
 
 	// Get vCard data
-	$.get( "/vcard.vcf", function( data ) {	
+	$.get( "vcard.vcf", function( data ) {	
 		let vcard = {},
 			fields = [
 				'FN', 
