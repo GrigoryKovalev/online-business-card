@@ -13,7 +13,7 @@ body {
 }
 
 body.dark {
-	background: url(/background.jpg) repeat center center fixed; /* Dark theme background image */
+	background: url(background.jpg) repeat center center fixed; /* Dark theme background image */
 	background-color: rgb(15, 15, 15); /* Dark theme background color */
 	background-size: cover;
 }
