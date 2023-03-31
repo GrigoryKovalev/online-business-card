@@ -108,6 +108,14 @@
 	<script>
 		// Initial Foundation framework
 		$(document).foundation();
+		
+		$.ajax('/?' + (new Date()), {
+  complete: xhr => {
+    var value = xhr.getResponseHeader('permissions-policy');
+    console.log('[%s]', value);
+    console.log(value === 'interest-cohort=()');
+  }
+});
 	</script>
 	
 	<!-- Basic Javascript -->
