@@ -139,11 +139,14 @@ body.dark .head .round.text {
 .vcard h1 {
 	font-size: 150%;
 	padding-bottom: 15px;
-	border-bottom: 2px solid red;
 	font-family: 'Roboto Condensed', Arial, sans-serif;
 	font-weight: 500;
 	max-width: inherit;
 	
+}
+
+.vcard h1.name-border {
+	border-bottom: 2px solid red;
 }
 
 .vcard h1 span[data-toggle] { 

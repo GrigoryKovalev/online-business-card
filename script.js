@@ -109,6 +109,8 @@ $(function () {
 			$('#tel a')
 				.attr('href', $('#tel a').attr('href') + '+' + vcard.tel.replace(/[^0-9]/g, ''))
 				.text('+' + vcard.tel);
+				
+			$('#name').addClass('name-border');
 		}
 		
 		// Get email
@@ -117,6 +119,8 @@ $(function () {
 			$('#email a')
 				.attr('href', $('#email a').attr('href') + '+' + vcard.email)
 				.text(vcard.email);
+				
+			$('#name').addClass('name-border');
 		}
 		
 		// Get url
@@ -154,6 +158,7 @@ $(function () {
 				.attr('href', $('#whatsapp').attr('href') + vcard.whatsapp.replace(/[^0-9]/g, ''));
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.telegram) {
@@ -162,6 +167,7 @@ $(function () {
 				.attr('href', $('#telegram').attr('href') + vcard.telegram);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.viber) {
@@ -170,6 +176,7 @@ $(function () {
 				.attr('href', $('#viber').attr('href') + '%2B' + vcard.viber.replace(/[^0-9]/g, ''));
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.vk) {
@@ -178,6 +185,7 @@ $(function () {
 				.attr('href', $('#vk').attr('href') + vcard.vk);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.facebook) {
@@ -186,6 +194,7 @@ $(function () {
 				.attr('href', $('#facebook').attr('href') + vcard.facebook);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.instagram) {
@@ -194,6 +203,7 @@ $(function () {
 				.attr('href', $('#instagram').attr('href') + vcard.instagram);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.twitter) {
@@ -202,6 +212,7 @@ $(function () {
 				.attr('href', $('#twitter').attr('href') + vcard.twitter);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.flickr) {
@@ -210,6 +221,7 @@ $(function () {
 				.attr('href', $('#flickr').attr('href') + vcard.flickr);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.linkedin) {
@@ -218,6 +230,7 @@ $(function () {
 				.attr('href', $('#linkedin').attr('href') + vcard.linkedin);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}
 		
 		if (vcard.github) {
@@ -226,6 +239,7 @@ $(function () {
 				.attr('href', $('#github').attr('href') + vcard.github);
 				
 			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
 		}				
 	});
 });
