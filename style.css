@@ -3,8 +3,8 @@
 
 body {
 	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
-	font-size: 140%;
-	/*background: url(background.jpg) repeat center center fixed;*/ /* Background image */
+	font-size: 140%; /* Font size */ /* Text */
+	/* background: url(background.jpg) repeat center center fixed; */ /* Background image */
 	background-color: rgb(255, 255, 255); /* Background color */
 	background-size: cover;
 	
@@ -19,7 +19,7 @@ body.dark {
 }
 
 .main {
-	color: black;
+	color: black; /* Font color */ /* Text */
 	background-color: rgba(255, 255, 255, 0.5);
 	
 	max-width: 390px; /* Card width = width + 60px (padding left and right). Change with the `.head .round {max-height: 330px;}` */
@@ -31,7 +31,7 @@ body.dark {
 }
 
 body.dark .main {
-	color: white;
+	color: white; /* Dark theme font color */ /* Text */
 	background-color: rgba(15, 15, 15, 0.5);
 }
 
@@ -47,7 +47,7 @@ body.dark .main {
 .vcard a:visited, 
 .vcard a:hover, 
 .vcard a:active {
-	color: black; 
+	color: black; /* Font color */ /* Links */
 	text-decoration: none;
 }
 
@@ -56,14 +56,14 @@ body.dark .vcard a:link,
 body.dark .vcard a:visited, 
 body.dark .vcard a:hover, 
 body.dark .vcard a:active {
-	color: white; 
+	color: white; /* Dark theme font color */ /* Links */
 }
 		
 .head {
 	position: relative;
 }
 
-.head .round {
+.round {
 	width: 100%;
 	max-height: 330px;
 	border-radius: 50%;
@@ -73,30 +73,30 @@ body.dark .vcard a:active {
 	overflow: -moz-scrollbars-none;
 }
 
-.head .round::-webkit-scrollbar {
+.round::-webkit-scrollbar {
 	width: 0px; 
 	height: 0px; 
 	background: transparent;
 }
 
-.head .round > span {
-	display: block;
-	padding: 45px;
-	font-size: 75%;
-}
-
-.head .round img.qrcode {
-	padding: 45px;
-	background-color: white;
-}
-
-.head .round.text {
+.round.text {
 	background-color: rgba(15, 15, 15, 0.1);
 }
 
-body.dark .head .round.text {
+body.dark .round.text {
 	background-color: rgba(255, 255, 255, 0.1);
-	color: white;
+	color: white; /* Dark theme font color */ /* Note */
+}
+
+.head .note {
+	display: block;
+	padding: 45px;
+	font-size: 75%; /* Font size */ /* Note */
+}
+
+.head img.qrcode {
+	padding: 45px;
+	background-color: rgb(255, 255, 255);
 }
 
 .head .vcard-link, 
@@ -138,10 +138,10 @@ body.dark .head .round.text {
 }
 
 .vcard h1 {
-	font-size: 150%;
-	padding-bottom: 15px;
-	font-family: 'Roboto Condensed', Arial, sans-serif;
+	font-family: inherit;
+	font-size: 150%; /* Font size */ /* Name */
 	font-weight: 500;
+	padding-bottom: 15px;
 	max-width: inherit;
 	
 }
@@ -156,13 +156,13 @@ body.dark .head .round.text {
 
 .vcard h1 small {
 	display: block;
-	font-size: 50%;
+	font-size: 50%; /* Font size */ /* Nickname */
+	color: #8a8a8a; /* Font color */ /* Nickname */
 	line-height: 1.5;
-	color: #8a8a8a;
 }
 
 body.dark .vcard h1 small {
-	color: #cacaca;
+	color: #cacaca; /* Dark theme font color */ /* Nickname */
 }
 
 .vcard .head + h1.name {

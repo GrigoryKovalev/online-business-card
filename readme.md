@@ -12,13 +12,13 @@
 
 Шаблон онлайн визитки, который вы можете изменить и разместить на любом хостинге, в том числе на [GitHub Pages](https://docs.github.com/ru/pages), тогда сайт вашей визитки будет доступен по адресу `username.github.io`, где `username` имя вашего пользователя.
 
-Файлы в [папке сайта визитки](https://grigorykovalev.github.io/online-business-card/) для базового использования:
+Файлы в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) для базового использования:
 
 - `index.html` - HTML-файл, отображающий вашу визитку.
 - `vcard.vcf` - файл в текстовом формате [vCard](https://ru.wikipedia.org/wiki/VCard) для заполнения данными вашей электронной визитки. 
 - `avatar.jpg` - аватар для замены на ваше изображение.
-- `qrcode.png` - файл QR-кода, содержащий сылку на онлайн визитку, для замены на ваш файл.
 - `background.jpg` - фоновое изображение для замены на ваш файл.
+- `qrcode.png` - файл QR-кода, содержащий сылку на онлайн визитку, для замены на ваш файл.
 
 <a name="how-to-use"></a>
 ## Как пользоваться
@@ -27,14 +27,15 @@
 
 - [Редактирование контактных данных](#editing-contact-details)
 - [Изменение аватара](#changing-your-avatar)
-- [Создание QR-кода](#creating-qr-code)
 - [Изменение фона](#changing-background)
+- [Изменение шрифта](#changing-font)
+- [Создание QR-кода](#creating-qr-code)
 - [Создание сайта визитки](#creating-business-card-site)
 
 <a name="editing-contact-details"></a>
 ### Редактирование контактных данных
 
-Вы можете создать и экспортировать карточку с вашими контактными данными и аватором в [VCF-файл](https://ru.wikipedia.org/wiki/VCard) на вашем устройстве [Android](https://support.google.com/contacts/answer/7199294?hl=ru), [Apple](https://support.apple.com/ru-ru/guide/contacts/adrbdcfd32e6/mac) или с помощью онлайн-сервиса [vCard maker](https://vcardmaker.com/), а затем заменить файл `vcard.vcf` в [папке сайта визитки](https://grigorykovalev.github.io/online-business-card/) на созданный вами с таким же названием.
+Вы можете создать и экспортировать карточку с вашими контактными данными и аватором в [VCF-файл](https://ru.wikipedia.org/wiki/VCard) на вашем устройстве [Android](https://support.google.com/contacts/answer/7199294?hl=ru), [Apple](https://support.apple.com/ru-ru/guide/contacts/adrbdcfd32e6/mac) или с помощью онлайн-сервиса [vCard maker](https://vcardmaker.com/), а затем заменить файл `vcard.vcf` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на созданный вами с таким же названием.
 
 Затем вы также сможете редактировать ваши контактные данные в файл `vcard.vcf` с помощью текстового редактора на компьютере (в Windows/Блокнот или macOS/TextEdit), а также изменить онлайн после [создания сайта визитки](#creating-business-card-site).
 
@@ -68,15 +69,106 @@
 <a name="changing-your-avatar"></a>
 ### Изменение аватара
 
-https://prisma-ai.com
+Замените файл `avatar.jpg` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на изображение вашего аватара с таким же названием, шириной и высотой не менее `330px`, если высота будет больше чем ширина, то аватар можно будет прокручивать вниз.
+
+> Обрезать и преобразовать изображение в `JPG` вы можете, например, с помощью онлайн-сервиса [iLoveImg](https://www.iloveimg.com/ru), а придать художественный стиль вашей фотографии - с помощью приложения [Prisma](https://prisma-ai.com).
+
+<a name="changing-background"></a>
+### Изменение фона
+
+Замените файл `background.jpg` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на изображение вашего фона с таким же названием.
+
+> Вы можете скачать обои на рабочий стол в качестве фона, например, с помощью онлайн-сервиса [Wallpapers.com](https://wallpapers.com).
+
+Вы можете не использовать фоновое изображение, для этого вы можете скопировать один из файлов из паки `example/`, и заменить им файл `index.html` с таким же названием в корневой папке сайта визитки:
+
+- [index.clean.html](https://grigorykovalev.github.io/online-business-card/example/index.clean.html) - шаблон с черным фоном вместо фонового изображения.
+- [index.white.html](https://grigorykovalev.github.io/online-business-card/example/index.white.html) - шаблон с белым фоном вместо фонового изображения и с фоновым изображением [в режиме отображения QR-кода](#creating-qr-code).
+- [index.white.clean.html](https://grigorykovalev.github.io/online-business-card/example/index.white.clean.html) - шаблон с белым фоном вместо фонового изображения и черным фоном в режиме отображения QR-кода.
+
+Или вы можете изменить цвет фона вручную в файле `style.css` в папке сайта визитки. 
+
+Чтобы удалить фон удалите строку:
+
+```css
+background: url(background.jpg) repeat center center fixed; /* Dark theme background image */
+```
+
+Или замените ее на:
+
+```css
+/* background: url(background.jpg) repeat center center fixed; */ /* Dark theme background image */
+```
+
+Для изменения цвета фона укажите его вместо `rgb(15, 15, 15)` в строке:
+
+```css
+background-color: rgb(15, 15, 15); /* Dark theme background color */
+```
+
+> Например, желтый `#FFFF00` в формате [HEX](https://learn.coderslang.com/ru/0028-html-colors-with-names-hex-and-rgb-codes/).
+
+Для изменения цвета фона в режиме QR-кода, укажите его вместо `#FFFF00` в строке:
+
+```css
+background-color: rgb(255, 255, 255); /* Background color */
+```
+
+Для добавления фонового изображения в режиме QR-кода замените строку:
+
+```css
+/* background: url(background.jpg) repeat center center fixed; */ /* Background image */
+```
+
+На строку:
+
+```css
+background: url(background.jpg) repeat center center fixed; /* Background image
+```
+
+> Вместо изображения `background.jpg` вы можете указать другое, например, `background-2.jpg`
+
+<a name="changing-font"></a>
+### Изменение шрифта
+
+Oswald
+
+[Google Fonts](https://fonts.google.com)
+
+```css
+/* Text font */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700,700italic,300|Roboto+Condensed:400,700|Roboto+Mono:400,700|Roboto+Slab:400,700&subset=cyrillic,latin);
+```
+
+```css
+font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
+```
+
+3 строчки color: 
+
+```css
+color: black; /* Font color */ /* Text */
+color: black; /* Font color */ /* Links */
+color: #8a8a8a; /* Font color */ /* Nickname */
+```
+
+4 строчки 
+
+```css
+color: white; /* Dark theme font color */ /* Text */
+color: white; /* Dark theme font color */ /* Links */
+color: white; /* Dark theme font color */ /* Note */
+color: #cacaca; /* Dark theme font color */ /* Nickname */
+```
 
 <a name="creating-qr-code"></a>
 ### Создание QR-кода
 
-https://www.qrcode-monkey.com
+Создайте QR-код с ссылкой на сайт вашей визитки, например, с помощью онлайн-сервиса [QRCode Monkey](https://www.qrcode-monkey.com) и замените файл `qrcode.png` в [папке сайта визитки](https://grigorykovalev.github.io/online-business-card/) на изображение вашего QR-кода с таким же названием. 
 
-<a name="changing-background"></a>
-### Изменение фона
+> Вы можете создать и обновить QR-код после [создания сайта визитки](#creating-business-card-site).
+
+QR-код отображается при клике на соответствующую иконку в правом верхнем углу аватара. В режиме отображения QR-кода фон меняется на белый цвет.
 
 <a name="creating-business-card-site"></a>
 ### Создание сайта визитки
