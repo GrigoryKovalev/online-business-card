@@ -64,6 +64,7 @@ body.dark .vcard a:active {
 }
 
 .head .round {
+	width: 100%;
 	max-height: 330px;
 	border-radius: 50%;
 	overflow-y: auto; 	

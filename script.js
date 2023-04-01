@@ -171,20 +171,21 @@ $(function () {
 			$('#social').removeClass('is-hidden');
 			$('#name').addClass('name-border');
 			
-			$.each(vcard.social, function(name, value) {				
-				let $id = $('#' + name.toLowerCase()),
-					url = value;
+			$.each(vcard.social, function(name, url) {	
+				let $id = $('#' + name.toLowerCase());
 				
-				if (value.length && value.search(/[\/]/) === -1) {
+				if (url.search(/[\/]/) !== -1) {
+					url = '//' + url;
+				} else if (url.length) {
 					if (name === 'whatsapp' || name === 'viber') {					
-						value = value.replace(/[^0-9]/g, '');
+						url = url.replace(/[^0-9]/g, '');
 						
 						if (name === 'viber') {
-							value = '%2B' + value;
+							url = '%2B' + url;
 						}
 					}
 				
-					url = $id.attr('href') + value;
+					url = $id.attr('href') + url;
 				}
 							
 				if (url) {
@@ -194,67 +195,7 @@ $(function () {
 				}	
 				
 				$id.removeClass('is-hidden');
-			});
-					
-// 			if (vcard.social.whatsapp !== undefined) {
-// 				$('#whatsapp')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#whatsapp').attr('href') + vcard.social.whatsapp.replace(/[^0-9]/g, ''));
-// 			}
-// 		
-// 			if (vcard.social.telegram !== undefined) {
-// 				$('#telegram')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#telegram').attr('href') + vcard.social.telegram);
-// 			}
-// 		
-// 			if (vcard.social.viber !== undefined) {
-// 				$('#viber')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#viber').attr('href') + '%2B' + vcard.social.viber.replace(/[^0-9]/g, ''));
-// 			}
-// 		
-// 			if (vcard.social.vk !== undefined) {
-// 				$('#vk')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#vk').attr('href') + vcard.social.vk);
-// 			}
-// 		
-// 			if (vcard.social.facebook !== undefined) {
-// 				$('#facebook')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#facebook').attr('href') + vcard.social.facebook);
-// 			}
-// 		
-// 			if (vcard.social.instagram !== undefined) {
-// 				$('#instagram')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#instagram').attr('href') + vcard.social.instagram);
-// 			}
-// 		
-// 			if (vcard.social.twitter !== undefined) {
-// 				$('#twitter')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#twitter').attr('href') + vcard.social.twitter);
-// 			}
-// 		
-// 			if (vcard.social.flickr !== undefined) {
-// 				$('#flickr')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#flickr').attr('href') + vcard.social.flickr);
-// 			}
-// 		
-// 			if (vcard.social.linkedin !== undefined) {
-// 				$('#linkedin')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#linkedin').attr('href') + vcard.social.linkedin);
-// 			}
-// 		
-// 			if (vcard.social.github !== undefined) z
-// 				$('#github')
-// 					.removeClass('is-hidden')
-// 					.attr('href', $('#github').attr('href') + vcard.social.github);
-// 			}	
+			});	
 		}			
 	});
 });
