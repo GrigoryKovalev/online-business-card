@@ -68,8 +68,12 @@
 <a name="changing-your-avatar"></a>
 ### Изменение аватара
 
+https://prisma-ai.com
+
 <a name="creating-qr-code"></a>
 ### Создание QR-кода
+
+https://www.qrcode-monkey.com
 
 <a name="changing-background"></a>
 ### Изменение фона
