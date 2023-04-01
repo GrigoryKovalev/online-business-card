@@ -27,17 +27,9 @@ $(function () {
 	// Get vCard data
 	$.get( "vcard.vcf", function( data ) {	
 		let vcard = {},
-			fields = [
-				'FN', 
-				'NICKNAME', 
-				'ORG', 
-				'EMAIL', 
-				'TEL', 
-				'URL',  
-				'NOTE',
-				//'BDAY', // Only used in vcard.vcf file
-			
-				// Social profile IDs 
+		
+			// Social profile IDs 
+			socials = [
 				'WhatsApp', 
 				'Telegram',
 				'Viber',
@@ -48,28 +40,51 @@ $(function () {
 				'Flickr',
 				'LinkedIn',
 				'GitHub',
-			];
+			],
+			
+			fields = [
+				'FN', 
+				'NICKNAME', 
+				'ORG', 
+				'EMAIL', 
+				'TEL', 
+				'URL',  
+				'NOTE',
+			].concat(socials);
 			
 		// Prepare data				
-		$.each(data.split("\n"), function(index, value) {				
-			$.each(fields, function(i, name) {		
-				let regexp = new RegExp('^(.*[\.,:,;,=,\-]+)?' + name + '([\.,:,;,=,\-]+.*)?:', 'i'),
-					key = name.toLowerCase();
+		$.each(data.split("\n"), function(index, value) {		
+			if (value.search(/[:]/) !== -1) {											
+				$.each(fields, function(i, name) {	
+					if (fields.includes(name)) {		
+						let regexp = new RegExp('^(.*[\.,:,;,=,\-]+)?' + name + '([\.,:,;,=,\-]+.*)?:', 'i'),
+							key = name.toLowerCase();
 					
-				if (value.search(regexp) !== -1) {
-					if (key === 'note') {
-						vcard[key] = value.replace(new RegExp('^(.*[\.,:,;,=,\-]+)?' + name + '([\.,,;,=,\-]+[^:]*)?:', 'i'), '').trim();
-					} else {
-						vcard[key] = value.replace(/(https?:\/\/|ftps?:\/\/)/, '').replace(regexp, '').trim().replace(/^[@,\+,#]/, '').replace(/;$/, '');
+						if (value.search(regexp) !== -1) {
+							if (key === 'note') {
+								vcard[key] = value.replace(new RegExp('^(.*[\.,:,;,=,\-]+)?' + name + '([\.,,;,=,\-]+[^:]*)?:', 'i'), '').trim();
+							} else {
+								value = value.replace(/(https?:\/\/|ftps?:\/\/)/, '').replace(regexp, '').trim().replace(/^[@,\+,#]/, '').replace(/;$/, '');
+							
+								if (socials.includes(name)) {
+									if (vcard.social === undefined) {
+										vcard.social = {};
+									}
+									
+									vcard.social[key] = value;
+									
+								} else {
+									vcard[key] = value;
+								}
+							}
+					
+							fields.splice(i, 1);
+						}
 					}
-				}
-			});
-			
-			if (value.search(/^[^;]*(\.)?PHOTO;/) !== -1) {
-				return false;
+				});
 			}
 		});
-						
+		
 		// Get name and organisation
 		if (vcard.fn.length || vcard.nickname.length || vcard.org.length) {
 			$('#name').removeClass('is-hidden');
@@ -151,96 +166,96 @@ $(function () {
 		}
 		
 		// Get social profile IDs
+		
+		if (vcard.social) {
+			$('#social').removeClass('is-hidden');
+			$('#name').addClass('name-border');
+			
+			$.each(vcard.social, function(name, value) {				
+				let $id = $('#' + name.toLowerCase()),
+					url = value;
+				
+				if (value.length && value.search(/[\/]/) === -1) {
+					if (name === 'whatsapp' || name === 'viber') {					
+						value = value.replace(/[^0-9]/g, '');
+						
+						if (name === 'viber') {
+							value = '%2B' + value;
+						}
+					}
+				
+					url = $id.attr('href') + value;
+				}
+							
+				if (url) {
+					$id.attr('href', url);
+				} else {
+					$id.removeAttr('href');
+				}	
+				
+				$id.removeClass('is-hidden');
+			});
 					
-		if (vcard.whatsapp) {
-			$('#whatsapp')
-				.removeClass('is-hidden')
-				.attr('href', $('#whatsapp').attr('href') + vcard.whatsapp.replace(/[^0-9]/g, ''));
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.telegram) {
-			$('#telegram')
-				.removeClass('is-hidden')
-				.attr('href', $('#telegram').attr('href') + vcard.telegram);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.viber) {
-			$('#viber')
-				.removeClass('is-hidden')
-				.attr('href', $('#viber').attr('href') + '%2B' + vcard.viber.replace(/[^0-9]/g, ''));
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.vk) {
-			$('#vk')
-				.removeClass('is-hidden')
-				.attr('href', $('#vk').attr('href') + vcard.vk);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.facebook) {
-			$('#facebook')
-				.removeClass('is-hidden')
-				.attr('href', $('#facebook').attr('href') + vcard.facebook);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.instagram) {
-			$('#instagram')
-				.removeClass('is-hidden')
-				.attr('href', $('#instagram').attr('href') + vcard.instagram);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.twitter) {
-			$('#twitter')
-				.removeClass('is-hidden')
-				.attr('href', $('#twitter').attr('href') + vcard.twitter);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.flickr) {
-			$('#flickr')
-				.removeClass('is-hidden')
-				.attr('href', $('#flickr').attr('href') + vcard.flickr);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.linkedin) {
-			$('#linkedin')
-				.removeClass('is-hidden')
-				.attr('href', $('#linkedin').attr('href') + vcard.linkedin);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}
-		
-		if (vcard.github) {
-			$('#github')
-				.removeClass('is-hidden')
-				.attr('href', $('#github').attr('href') + vcard.github);
-				
-			$('#social').removeClass('is-hidden');
-			$('#name').addClass('name-border');
-		}				
+// 			if (vcard.social.whatsapp !== undefined) {
+// 				$('#whatsapp')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#whatsapp').attr('href') + vcard.social.whatsapp.replace(/[^0-9]/g, ''));
+// 			}
+// 		
+// 			if (vcard.social.telegram !== undefined) {
+// 				$('#telegram')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#telegram').attr('href') + vcard.social.telegram);
+// 			}
+// 		
+// 			if (vcard.social.viber !== undefined) {
+// 				$('#viber')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#viber').attr('href') + '%2B' + vcard.social.viber.replace(/[^0-9]/g, ''));
+// 			}
+// 		
+// 			if (vcard.social.vk !== undefined) {
+// 				$('#vk')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#vk').attr('href') + vcard.social.vk);
+// 			}
+// 		
+// 			if (vcard.social.facebook !== undefined) {
+// 				$('#facebook')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#facebook').attr('href') + vcard.social.facebook);
+// 			}
+// 		
+// 			if (vcard.social.instagram !== undefined) {
+// 				$('#instagram')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#instagram').attr('href') + vcard.social.instagram);
+// 			}
+// 		
+// 			if (vcard.social.twitter !== undefined) {
+// 				$('#twitter')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#twitter').attr('href') + vcard.social.twitter);
+// 			}
+// 		
+// 			if (vcard.social.flickr !== undefined) {
+// 				$('#flickr')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#flickr').attr('href') + vcard.social.flickr);
+// 			}
+// 		
+// 			if (vcard.social.linkedin !== undefined) {
+// 				$('#linkedin')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#linkedin').attr('href') + vcard.social.linkedin);
+// 			}
+// 		
+// 			if (vcard.social.github !== undefined) z
+// 				$('#github')
+// 					.removeClass('is-hidden')
+// 					.attr('href', $('#github').attr('href') + vcard.social.github);
+// 			}	
+		}			
 	});
 });
 
