@@ -23,12 +23,13 @@ body.slab {
 }
 
 body.dark {
-	background: rgb(15, 15, 15) repeat center center fixed; /* Background */
+	background-color: rgb(15, 15, 15); /* Background */
 }
 
 body.dark.background {
 	background: url(background.jpg) repeat center center fixed; /* Background */
 	background-size: cover;
+	background-color: rgb(15, 15, 15);
 }
 
 .main {
