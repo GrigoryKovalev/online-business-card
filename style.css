@@ -27,7 +27,7 @@ body.dark {
 }
 
 body.dark.background {
-	background: url(../background.jpg) repeat center center fixed; /* Background */
+	background: url(background.jpg) repeat center center fixed; /* Background */
 	background-size: cover;
 }
 
