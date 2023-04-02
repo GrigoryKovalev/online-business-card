@@ -1,6 +1,6 @@
 # Онлайн визитка
 
-See also [documentation in English](https://grigorykovalev.github.io/online-business-card/readme.md).
+See also [documentation in English](https://github.com/GrigoryKovalev/online-business-card/readme.md).
 
 [![Скриншоты](https://grigorykovalev.github.io/online-business-card/example/example.gif)](https://grigorykovalev.github.io/online-business-card/example/example.jpg)
 
@@ -95,7 +95,7 @@ See also [documentation in English](https://grigorykovalev.github.io/online-busi
 - [`index.dark.html`](http://online-business-card.localhost/example/index.dark.html) - шаблон с фоном черного цвета и белым фоном в режиме отображения QR-кода.
 - [`index.dark.background.html`](http://online-business-card.localhost/example/index.dark.background.html) - стандартный шаблон с фоновым изображением и белым фоном в режиме отображения QR-кода.
 
-Также вы можете изменить шрифт, скопировав один из файлов в директории `example/` с дополнительным вариантом шрифта из семейства [Roboto](https://fonts.google.com/?query=Christian+Robertson):
+Также вы можете изменить шрифт, скопировав один из файлов в директории `/example` с дополнительным вариантом шрифта из семейства [Roboto](https://fonts.google.com/?query=Christian+Robertson):
 
 - Roboto Condensed: 
 

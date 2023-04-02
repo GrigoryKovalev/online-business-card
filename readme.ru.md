@@ -1,6 +1,6 @@
 # Онлайн визитка
 
-See also [documentation in English](https://grigorykovalev.github.io/online-business-card/readme.md).
+See also [documentation in English](https://github.com/GrigoryKovalev/online-business-card/readme.md).
 
 [![Скриншоты](https://grigorykovalev.github.io/online-business-card/example/example.gif)](https://grigorykovalev.github.io/online-business-card/example/example.jpg)
 
