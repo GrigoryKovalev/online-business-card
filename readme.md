@@ -1,6 +1,6 @@
 # Онлайн визитка
 
-[![Скриншоты](example/example.gif)](example/example.jpg)
+[![Скриншоты](https://grigorykovalev.github.io/online-business-card/example/example.gif)](https://grigorykovalev.github.io/online-business-card/example/example.jpg)
 
 > Пример сайта визитки: [grigorykovalev.github.io/online-business-card/](https://grigorykovalev.github.io/online-business-card/).
 
