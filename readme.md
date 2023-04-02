@@ -6,11 +6,17 @@
 
 - [Описание](#about)
 - [Как пользоваться](#how-to-use)
+	- [Скачивание шаблона сайта визитки](#downloading-business-card-website-template)
+	- [Редактирование контактных данных](#editing-contact-details)
+	- [Изменение аватара](#changing-your-avatar)
+	- [Изменение фона](#changing-background)
+	- [Создание QR-кода](#creating-qr-code)
+	- [Создание сайта визитки](#creating-business-card-site)
 
 <a name="about"></a>
 ## Описание
 
-Шаблон онлайн визитки, который вы можете изменить и разместить на любом хостинге, в том числе на [GitHub Pages](https://docs.github.com/ru/pages), тогда сайт вашей визитки будет доступен по адресу `username.github.io`, где `username` имя вашего пользователя.
+Шаблон сайта визитки, который вы можете изменить и разместить на любом хостинге, в том числе на [GitHub Pages](https://docs.github.com/ru/pages), тогда сайт вашей визитки будет доступен по адресу вида `username.github.io`, где `username` имя вашего пользователя.
 
 Файлы в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) для базового использования:
 
@@ -23,14 +29,10 @@
 <a name="how-to-use"></a>
 ## Как пользоваться
 
-[Скачайте](http://github.com/GrigoryKovalev/online-business-card), отредактируйте и разместите.
+<a name="downloading-business-card-website-template"></a>
+### Скачивание шаблона сайта визитки
 
-- [Редактирование контактных данных](#editing-contact-details)
-- [Изменение аватара](#changing-your-avatar)
-- [Изменение фона](#changing-background)
-- [Изменение шрифта](#changing-font)
-- [Создание QR-кода](#creating-qr-code)
-- [Создание сайта визитки](#creating-business-card-site)
+Вы можете скачать файлы сайта визитки по [ссылке](https://github.com/GrigoryKovalev/online-business-card/archive/refs/heads/master.zip) или перейти в [папку сайту визитки](https://github.com/GrigoryKovalev/online-business-card) и скачать ZIP-архив, нажав кнопку `Code` справа над списком файлов, а затем - `Download ZIP`.
 
 <a name="editing-contact-details"></a>
 ### Редактирование контактных данных
@@ -73,6 +75,10 @@
 
 > Обрезать и преобразовать изображение в `JPG` вы можете, например, с помощью онлайн-сервиса [iLoveImg](https://www.iloveimg.com/ru), а придать художественный стиль вашей фотографии - с помощью приложения [Prisma](https://prisma-ai.com).
 
+Удалите или лучше замените файл `favicon.ico` на изображение вашего значка для отображения его во вкладке браузера.
+
+> Создать значок `favicon.ico` вы можете, например, с помощью онлайн сервиса [Favicon Generator](https://realfavicongenerator.net), загрузив изображение вашего аватара и скачав новый файл значка.
+
 <a name="changing-background"></a>
 ### Изменение фона
 
@@ -80,11 +86,30 @@
 
 > Вы можете скачать обои на рабочий стол в качестве фона, например, с помощью онлайн-сервиса [Wallpapers.com](https://wallpapers.com).
 
-Вы можете не использовать фоновое изображение или использовать его только в режиме отображения QR-кода, для этого вы можете скопировать один из файлов из паки `example/`, и заменить им файл `index.html` с таким же названием в корневой папке сайта визитки:
+Вы можете не использовать фоновое изображение или наоборот, использовать его только в режиме отображения [QR-кода](#creating-qr-code), для этого скопируйте один из файлов в директории `example/`, и заменить им файл `index.html` с таким же названием в папке сайта визитки:
 
-- [index.clean.html](https://grigorykovalev.github.io/online-business-card/example/index.clean.html) - шаблон с черным фоном вместо фонового изображения.
-- [index.white.html](https://grigorykovalev.github.io/online-business-card/example/index.white.html) - шаблон с белым фоном вместо фонового изображения и с фоновым изображением [в режиме отображения QR-кода](#creating-qr-code).
-- [index.white.clean.html](https://grigorykovalev.github.io/online-business-card/example/index.white.clean.html) - шаблон с белым фоном вместо фонового изображения и черным фоном в режиме отображения QR-кода.
+- [`index.html`](http://online-business-card.localhost/example/index.html) - шаблон с фоном белого цвета и фоном черного цвета в режиме отображения QR-кода.
+- [`index.background.html`](http://online-business-card.localhost/example/index.background.html) - шаблон с фоном белого цвета и фоновым изображением в режиме отображения QR-кода.
+- [`index.dark.html`](http://online-business-card.localhost/example/index.dark.html) - шаблон с фоном черного цвета и белым фоном в режиме отображения QR-кода.
+- [`index.dark.background.html`](http://online-business-card.localhost/example/index.dark.background.html) - стандартный шаблон с фоновым изображением и белым фоном в режиме отображения QR-кода.
+
+Также вы можете изменить шрифт, скопировав один из файлов в директории `example/` с дополнительным вариантом шрифта из семейства [Roboto](https://fonts.google.com/?query=Christian+Robertson):
+
+- Roboto Condensed: 
+	- [`index.condensed.html`](http://online-business-card.localhost/example/index.condensed.html) - белый фон/черный фон;
+	- [`index.condensed.background.html`](http://online-business-card.localhost/example/index.condensed.background.html) - белый фон/фоновое изображение;
+	- [`index.condensed.dark.html`](http://online-business-card.localhost/example/index.condensed.dark.html) - черный фон/белый фон;
+	- [`index.condensed.dark.background.html`](http://online-business-card.localhost/example/index.condensed.dark.background.html) - фоновое изображение/белый фон;
+- Roboto Mono: 
+	- [`index.mono.html`](http://online-business-card.localhost/example/index.mono.html) - белый фон/черный фон; 
+	- [`index.mono.background.html`](http://online-business-card.localhost/example/index.mono.background.html) - белый фон/фоновое изображение; 
+	- [`index.mono.dark.html`](http://online-business-card.localhost/example/index.mono.dark.html) - черный фон/белый фон; 
+	- [`index.mono.dark.background.html`](http://online-business-card.localhost/example/index.mono.dark.background.html) - фоновое изображение/белый фон;
+- Roboto Slab: 
+	- [`index.slab.html`](http://online-business-card.localhost/example/index.slab.html) - белый фон/черный фон;
+	- [`index.slab.background.html`](http://online-business-card.localhost/example/index.slab.background.html) - белый фон/фоновое изображение; 
+	- [`index.slab.dark.html`](http://online-business-card.localhost/example/index.slab.dark.html) - черный фон/белый фон; 
+	- [`index.slab.dark.background.html`](http://online-business-card.localhost/example/index.slab.dark.background.html) - фоновое изображение/белый фон.
 
 <a name="creating-qr-code"></a>
 ### Создание QR-кода
@@ -98,5 +123,14 @@ QR-код отображается при клике на соответству
 <a name="creating-business-card-site"></a>
 ### Создание сайта визитки
 
-[изменить файл онлайн](https://docs.github.com/ru/repositories/working-with-files/managing-files/editing-files) после загрузки на [Github](https://docs.github.com/ru/repositories/working-with-files/managing-files/adding-a-file-to-a-repository), используемого для хранения файлов [GitHub Pages](https://docs.github.com/ru/pages) вы сможете [изменить файл онлайн](https://docs.github.com/ru/repositories/working-with-files/managing-files/editing-files).
+[Зарегестрируйтесь бесплатно на GitHub](https://github.com/signup) - подробнее в [инсрукции по регистрации](https://docs.github.com/ru/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 
+Затем создайте новый репозиторий (место хранения файлов) с именем соответствующим вашему имени пользователя (логину) и включите в настройках Github Pages - подробнее в [кратком руководстве по GitHub Pages](https://docs.github.com/ru/pages/quickstart):
+
+> После регистрации, нажмите в правом верхнем углу знак `+` и нажмите в открывшемся меню `New repository`. На странице создания репозитория в поле `Owner` выберите ваше имя пользователя и в поле `Repository name` в качестве имени репозитория напишите ваше имя пользователя (имя пользователя = имени репозитория), оставьте галочку в поле `Public`, ничего больше не выбирайте и нажмите кнопку `Create repository`. 
+>
+> На странице вашего репозитория перейдите по ссылке `uploading an existing file`, перетащите файлы сайта визитки с вашего компьютера в поле `choose your files` и нажмите кнопку `Commit changes` для загрузки файлов.
+> 
+> Для включения [GitHub Pages](https://docs.github.com/ru/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) перейдите в настройки репозитория, нажав `Settings` в меню под названием вашего репозитория, затем перейдите в меню слева в раздел `Pages` и в поле `Branch` поменяйте значение `none` на главную ветку `main`, оставте выбранную корневую директорию `/root` и нажмите кнопку `Save`. Через несколько минут ваши файлы опубликуются и в разделе `Pages` на верху отобразиться ссылка на ваш сайт вида `username.github.io`, где вместо `username` будет ваше имя пользователя. 
+
+После загрузки файлов вы сможете онлайн вносить изменения в файл `vcard.vcf` с вашими контактными данными, загружать новые файлы и удалить старые - подробнее в [инструкции по управление файлами на GitHub](https://docs.github.com/ru/repositories/working-with-files/managing-files).
