@@ -90,33 +90,33 @@ See also [documentation in English](readme.md).
 
 Вы можете не использовать фоновое изображение или наоборот, использовать его только в режиме отображения [QR-кода](#creating-qr-code), для этого скопируйте один из файлов в директории `/example`, и заменить им файл `index.html` с таким же названием в папке сайта визитки:
 
-- [`index.html`](http://online-business-card.localhost/example/index.html) - шаблон с фоном белого цвета и фоном черного цвета в режиме отображения QR-кода.
-- [`index.background.html`](http://online-business-card.localhost/example/index.background.html) - шаблон с фоном белого цвета и фоновым изображением в режиме отображения QR-кода.
-- [`index.dark.html`](http://online-business-card.localhost/example/index.dark.html) - шаблон с фоном черного цвета и белым фоном в режиме отображения QR-кода.
-- [`index.dark.background.html`](http://online-business-card.localhost/example/index.dark.background.html) - стандартный шаблон с фоновым изображением и белым фоном в режиме отображения QR-кода.
+- [`index.html`](https://grigorykovalev.github.io/online-business-card/example/index.html) - шаблон с фоном белого цвета и фоном черного цвета в режиме отображения QR-кода.
+- [`index.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.background.html) - шаблон с фоном белого цвета и фоновым изображением в режиме отображения QR-кода.
+- [`index.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.html) - шаблон с фоном черного цвета и белым фоном в режиме отображения QR-кода.
+- [`index.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.background.html) - стандартный шаблон с фоновым изображением и белым фоном в режиме отображения QR-кода.
 
 Также вы можете изменить шрифт, скопировав один из файлов в директории `/example` с дополнительным вариантом шрифта из семейства [Roboto](https://fonts.google.com/?query=Christian+Robertson):
 
 - Roboto Condensed: 
 
-	- [`index.condensed.html`](http://online-business-card.localhost/example/index.condensed.html) - белый фон/черный фон;
-	- [`index.condensed.background.html`](http://online-business-card.localhost/example/index.condensed.background.html) - белый фон/фоновое изображение;
-	- [`index.condensed.dark.html`](http://online-business-card.localhost/example/index.condensed.dark.html) - черный фон/белый фон;
-	- [`index.condensed.dark.background.html`](http://online-business-card.localhost/example/index.condensed.dark.background.html) - фоновое изображение/белый фон;
+	- [`index.condensed.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.html) - белый фон/черный фон;
+	- [`index.condensed.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.background.html) - белый фон/фоновое изображение;
+	- [`index.condensed.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.html) - черный фон/белый фон;
+	- [`index.condensed.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.background.html) - фоновое изображение/белый фон;
 	
 - Roboto Mono: 
 
-	- [`index.mono.html`](http://online-business-card.localhost/example/index.mono.html) - белый фон/черный фон; 
-	- [`index.mono.background.html`](http://online-business-card.localhost/example/index.mono.background.html) - белый фон/фоновое изображение; 
-	- [`index.mono.dark.html`](http://online-business-card.localhost/example/index.mono.dark.html) - черный фон/белый фон; 
-	- [`index.mono.dark.background.html`](http://online-business-card.localhost/example/index.mono.dark.background.html) - фоновое изображение/белый фон;
+	- [`index.mono.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.html) - белый фон/черный фон; 
+	- [`index.mono.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.background.html) - белый фон/фоновое изображение; 
+	- [`index.mono.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.html) - черный фон/белый фон; 
+	- [`index.mono.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.background.html) - фоновое изображение/белый фон;
 	
 - Roboto Slab: 
 
-	- [`index.slab.html`](http://online-business-card.localhost/example/index.slab.html) - белый фон/черный фон;
-	- [`index.slab.background.html`](http://online-business-card.localhost/example/index.slab.background.html) - белый фон/фоновое изображение; 
-	- [`index.slab.dark.html`](http://online-business-card.localhost/example/index.slab.dark.html) - черный фон/белый фон; 
-	- [`index.slab.dark.background.html`](http://online-business-card.localhost/example/index.slab.dark.background.html) - фоновое изображение/белый фон.
+	- [`index.slab.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.html) - белый фон/черный фон;
+	- [`index.slab.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.background.html) - белый фон/фоновое изображение; 
+	- [`index.slab.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.html) - черный фон/белый фон; 
+	- [`index.slab.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.background.html) - фоновое изображение/белый фон.
 
 <a name="creating-qr-code"></a>
 ### Создание QR-кода
