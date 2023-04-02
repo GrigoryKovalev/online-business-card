@@ -128,8 +128,10 @@ background: url(background.jpg) repeat center center fixed; /* Background image
 
 > Вместо изображения `background.jpg` вы можете указать другое, например, `background-2.jpg`
 
+### Дополнительные настройки
+
 <a name="changing-font"></a>
-### Изменение шрифта
+#### Изменение шрифта
 
 Oswald
 
@@ -159,6 +161,11 @@ color: white; /* Dark theme font color */ /* Text */
 color: white; /* Dark theme font color */ /* Links */
 color: white; /* Dark theme font color */ /* Note */
 color: #cacaca; /* Dark theme font color */ /* Nickname */
+```
+
+Размер
+```
+/* Font size */
 ```
 
 <a name="creating-qr-code"></a>

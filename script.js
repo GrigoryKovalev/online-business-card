@@ -25,7 +25,7 @@ $(function () {
 	});
 
 	// Get vCard data
-	$.get( "vcard.vcf", function( data ) {	
+	$.get($('#vcard-link').attr('href'), function( data ) {	
 		let vcard = {},
 		
 			// Social profile IDs 

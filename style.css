@@ -1,20 +1,33 @@
 /* Text font */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700,700italic,300|Roboto+Condensed:400,700|Roboto+Mono:400,700|Roboto+Slab:400,700&subset=cyrillic,latin);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,600|Roboto+Slab:400,600&subset=cyrillic,latin);
 
 body {
-	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
+	font-family: 'Roboto', Arial, sans-serif; /* Text font */
 	font-size: 140%; /* Font size */ /* Text */
-	/* background: url(background.jpg) repeat center center fixed; */ /* Background image */
-	background-color: rgb(255, 255, 255); /* Background color */
+	background: rgb(255, 255, 255) repeat center center fixed; /* Background */
 	background-size: cover;
-	
 	padding: 0; 
 	margin: 0;
 }
 
+body.condensed {
+	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
+}
+
+body.mono {
+	font-family: 'Roboto Mono', Arial, sans-serif; /* Text font */
+}
+
+body.slab {
+	font-family: 'Roboto Slab', Arial, sans-serif; /* Text font */
+}
+
 body.dark {
-	background: url(background.jpg) repeat center center fixed; /* Dark theme background image */
-	background-color: rgb(15, 15, 15); /* Dark theme background color */
+	background: rgb(15, 15, 15) repeat center center fixed; /* Background */
+}
+
+body.dark.background {
+	background: url(../background.jpg) repeat center center fixed; /* Background */
 	background-size: cover;
 }
 
@@ -23,9 +36,9 @@ body.dark {
 	background-color: rgba(255, 255, 255, 0.5);
 	
 	max-width: 390px; /* Card width = width + 60px (padding left and right). Change with the `.head .round {max-height: 330px;}` */
-	margin: auto; 
-	height: calc(100vh);
+	margin: auto;
 	text-align: center;
+	height: calc(100vh);
 	display: table;
 	vertical-align: middle;
 }
@@ -63,7 +76,7 @@ body.dark .vcard a:active {
 	position: relative;
 }
 
-.round {
+.head .round {
 	width: 100%;
 	max-height: 330px;
 	border-radius: 50%;
@@ -73,17 +86,17 @@ body.dark .vcard a:active {
 	overflow: -moz-scrollbars-none;
 }
 
-.round::-webkit-scrollbar {
+.head .round::-webkit-scrollbar {
 	width: 0px; 
 	height: 0px; 
 	background: transparent;
 }
 
-.round.text {
+.head .round.text {
 	background-color: rgba(15, 15, 15, 0.1);
 }
 
-body.dark .round.text {
+body.dark .head .round.text {
 	background-color: rgba(255, 255, 255, 0.1);
 	color: white; /* Dark theme font color */ /* Note */
 }
@@ -140,7 +153,7 @@ body.dark .round.text {
 .vcard h1 {
 	font-family: inherit;
 	font-size: 150%; /* Font size */ /* Name */
-	font-weight: 500;
+	font-weight: inherit;
 	padding-bottom: 15px;
 	max-width: inherit;
 	
@@ -179,19 +192,10 @@ body.dark .vcard h1 small {
 
 .vcard .social a {
 	display: inline-block;
-	margin-top: 15px;
-}
-
-.vcard .social a {
-	margin-left: 7px;
-	margin-right: 7px;
+	margin: 15px 7px 0 7px;
 }
 
 .vcard .social a:not([href]) {
-	cursor: inherit;
-}
-
-body.dark .vcard .social a:not([href]) {
 	cursor: inherit;
 }
 
