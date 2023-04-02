@@ -1,6 +1,6 @@
 # Online business card
 
-See also [documentation in English](readme.md).
+Смотрите также [документацию на Русском](readme.ru.md).
 
 [![Screenshots](https://grigorykovalev.github.io/online-business-card/example/example.gif)](https://grigorykovalev.github.io/online-business-card/example/example.jpg)
 
