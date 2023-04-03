@@ -130,12 +130,12 @@ The QR code is displayed when you click on the corresponding icon in the upper r
 <a name="creating-business-card-site"></a>
 ### Creating a business card site
 
-[Sign up for free on GitHub](https://github.com/signup), then create a new repository (file storage location) with a name corresponding to your username (login) and enable [Github Pages](https://docs.github.com/ru/pages/quickstart):
+[Sign up for free on GitHub](https://github.com/signup), then create a new repository (file storage location) with a name corresponding to `username.github.io` (where `username` is your username), and enable in the settings [Github Pages](https://docs.github.com/en/pages/quickstart).
 
-> After registration, click on the `+` sign in the upper right corner and click on the `New repository` menu that opens. On the repository creation page, in the `Owner` field, select your username and in the `Repository name` field, write your username as the repository name (username = repository name), leave a checkmark in the `Public` field, do not select anything else and click the `Create repository` button. 
+> After registration, click on the `+` sign in the upper right corner and click on the `New repository` menu that opens. On the repository creation page, in the `Owner` field, select your username and in the `Repository name` field, write `username.github.io` as the name of the repository, where instead of `username` enter your username (in small letters), leave a checkmark in `Public` field, do not select anything else and click the `Create repository` button. 
 >
 > On your repository page, go to the `uploading an existing file` link, drag the online business card website files from your computer into the `choose your files` field, and click the `Commit changes` button to upload the files.
 > 
-> To enable GitHub Pages, go to your repository settings by clicking `Settings` in the menu under your repository name, then go to `Pages` in the menu on the left and change the `Branch` field from `none` to `main`, leave selected root directory `/root` and click the `Save` button. In a few minutes your files will be published and in the `Pages` section at the top you will see a link to your site like `username.github.io` with your username instead of `username`. 
+> To enable GitHub Pages, go to your repository settings by clicking `Settings` in the menu under your repository name, then go to `Pages` in the menu on the left and change the `Branch` field from `none` to `main`, leave selected root directory `/root` and click the `Save` button. In a few minutes your files will be published and in the `Pages` section at the top you will see a link to your site like `username.github.io`. 
 
 Now you can [manage business card site files with GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files) - edit text files (e.g. change `vcard.vcf` file with your contact details), upload new ones (for example, the QR code image `qrcode.png`) and delete old ones (for example, delete the `/example` directory).
