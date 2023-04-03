@@ -2,7 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,600|Roboto+Slab:400,600&subset=cyrillic,latin);
 
 html, body, body > div {
-	height: 100%;
+	height: 100vh;
+	height: -webkit-fill-available;
 }
 
 body {
@@ -44,7 +45,8 @@ body.dark.background {
 	width: 100%;
 	margin: auto;
 	text-align: center;
-	height: 100%;
+	height: 100vh;
+	height: -webkit-fill-available;
 	display: table;
 	vertical-align: middle;
 }
