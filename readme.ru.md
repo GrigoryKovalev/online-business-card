@@ -121,7 +121,7 @@ See also [documentation in English](readme.md).
 <a name="creating-qr-code"></a>
 ### Создание QR-кода
 
-Создайте QR-код с ссылкой на сайт вашей визитки, например, с помощью онлайн-сервиса [QRCode Monkey](https://www.qrcode-monkey.com) и замените файл `qrcode.png` в [папке сайта визитки](https://grigorykovalev.github.io/online-business-card/) на изображение вашего QR-кода с таким же названием. 
+Создайте QR-код с ссылкой на сайт вашей визитки, например, с помощью онлайн-сервиса [QRCode Monkey](https://www.qrcode-monkey.com) и замените файл `qrcode.png` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на изображение вашего QR-кода с таким же названием. 
 
 > Вы можете создать и обновить QR-код после [создания сайта визитки](#creating-business-card-site).
 

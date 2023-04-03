@@ -26,7 +26,7 @@ Files in [business card site folder](https://github.com/GrigoryKovalev/online-bu
 - `vcard.vcf` - a file in text format [vCard](https://en.wikipedia.org/wiki/VCard) to fill in the data of your e-card. 
 - `avatar.jpg` - avatar to replace with your image.
 - `background.jpg` - background image to replace with your file.
-- `qrcode.png' - a QR code file containing a link to an online business card to replace it with your file.
+- `qrcode.png` - a QR code file containing a link to an online business card to replace it with your file.
 
 <a name="how-to-use"></a>
 ## How to use
@@ -39,7 +39,7 @@ You can download business card website files from [link](https://github.com/Grig
 <a name="editing-contact-details"></a>
 ### Editing contact details
 
-You can create and export a card with your contact details and avatar to [VCF-file](https://en.wikipedia.org/wiki/VCard) on your [Android] device (https://support.google.com/contacts/answer/7199294?hl=en), [Apple](https://support.apple.com/en-en/guide/contacts/adrbdcfd32e6/mac) or using the [vCard maker] online service (https://vcardmaker.com/), and then replace the `vcard.vcf` file in [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with the one you created with the same name.
+You can create and export a card with your contact details and avatar to a [VCF file](https://ru.wikipedia.org/wiki/VCard) on your [Android](https://support.google.com/contacts/answer/7199294?hl=en) device, [Apple](https://support.apple.com/en-us/guide/contacts/adrbdcfd32e6/mac) or using the online service [vCard maker](https://vcardmaker.com/), and then replace the `vcard.vcf` file in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with the one you created with the same name.
 
 You can then also edit your contact details in the `vcard.vcf` file using a text editor on your computer (in Windows/Notepad or macOS/TextEdit), as well as edit online after [creating a business card site](#creating-business-card-site).
 
@@ -75,7 +75,7 @@ Only the following fields from the `vcard.vcf` file are displayed on the vCard s
 
 Replace the file `avatar.jpg` in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with an image of your avatar with the same name, width and height of at least `330px`, if the height is greater than the width, then the avatar can be scrolled down.
 
-> You can trim and convert an image to `JPG`, for example, using the online service [iLoveImg](https://www.iloveimg.com/en), and give the artistic style of your photo - using the application [Prisma](https://prisma-ai.com).
+> You can trim and convert an image to `JPG`, for example, using the online service [iLoveImg](https://www.iloveimg.com/), and give the artistic style of your photo - using the application [Prisma](https://prisma-ai.com).
 
 Delete or better replace the file `favicon.ico` with the image of your icon to display it in the browser tab.
 
@@ -88,54 +88,10 @@ Replace the `background.jpg` file in the [business card site folder](https://git
 
 > You can download wallpapers to your desktop as a background, for example, using the online service [Wallpapers.com](https://wallpapers.com).
 
-Optionally, you can not use a background image or vice versa, use it only in the [QR-code](#creating-qr-code) display mode, to do this, copy one of the files in the `/example` directory, and replace the `index .html` with the same name in the business card site folder:
+Optionally, you can not use a background image or vice versa, use it only in the [QR-code](#creating-qr-code) display mode, to do this, copy one of the files in the `/example` directory, and replace the `index.html` with the same name in the business card site folder:
 
-- [`index.html`](https://grigorykovalev.github.io/online-business-card/example/index.html) - a template with a white background and a black background in the QR code display mode.
-- [`index.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.background.html) - template with white background and background image in QR code display mode.
-- [`index.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.html) - template with black background and white background in QR code display mode.
-- [`index.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.background.html) - standard template with background image and white background in QR code display mode.
-
-You can also change the font by copying one of the files in the `/example` directory with an additional font variant from the [Roboto] family (https://fonts.google.com/?query=Christian+Robertson):
-
-- Roboto Condensed: 
-
-	- [`index.condensed.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.html) - white background/black background;
-	- [`index.condensed.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.background.html) - white background/background image;
-	- [`index.condensed.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.html) - black background/white background;
-	- [`index.condensed.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.background.html) - фоновое изображение/белый фон;
-	
-- Roboto Mono: 
-
-	- [`index.mono.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.html) - white background/black background; 
-	- [`index.mono.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.background.html) - white background/background image; 
-	- [`index.mono.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.html) - black background/white background; 
-	- [`index.mono.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.background.html) - background image/white background;
-	
-- Roboto Slab: 
-
-	- [`index.slab.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.html) - white background/black background;
-	- [`index.slab.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.background.html) - white background/background image; 
-	- [`index.slab.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.html) - black background/white background; 
-	- [`index.slab.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.background.html) - background image/white background.
-
-<a name="creating-qr-code"></a>
-### Create a QR code
-
-Create a QR code with a link to your business card site, for example, using the [QRCode Monkey](https://www.qrcode-monkey.com) online service and replace the `qrcode.png` file in the [business card site folder]( https://grigorykovalev.github.io/online-business-card/) to the image of your QR code with the same name. 
-
-> You can create and update a QR code after [creating a business card site](#creating-business-card-site).
-
-The QR code is displayed when you click on the corresponding icon in the upper right corner of the avatar. In the QR code display mode, the background changes to white.
-
-<a name="creating-business-card-site"></a>
-### Creating a business card site
-
-[Sign up for free on GitHub](https://github.com/signup), then create a new repository (file storage location) with a name corresponding to your username (login) and enable [Github Pages](https://docs .github.com/ru/pages/quickstart):
-
-> After registration, click on the `+` sign in the upper right corner and click on the `New repository` menu that opens. On the repository creation page, in the `Owner` field, select your username and in the `Repository name` field, write your username as the repository name (username = repository name), leave a checkmark in the `Public` field, do not select anything else and click the `Create repository` button. 
->
-> On your repository page, go to the `uploading an existing file` link, drag the online business card website files from your computer into the `choose your files` field, and click the `Commit changes` button to upload the files.
-> 
-> To enable GitHub Pages, go to your repository settings by clicking `Settings` in the menu under your repository name, then go to `Pages` in the menu on the left and change the `Branch` field from `none` to `main`, leave selected root directory `/root` and click the `Save` button. In a few minutes your files will be published and in the `Pages` section at the top you will see a link to your site like `username.github.io` with your username instead of `username`. 
-
-Now you can [manage business card site files with GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files) - edit text files (e.g. change `vcard.vcf file ` with your contact details), upload new ones (for example, the QR code image `qrcode.png`) and delete old ones (for example, delete the `/example` directory).
+- [`index.html`](https://grigorykovalev.github.io/online-business-card/example/index.html) - a template with a white background and a black background in the QR code display mode.р- [`index.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.background.html) - template with white background and background image in QR code display mode.е- [`index.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.html) - template with black background and white background in QR code display mode.в- [`index.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.background.html) - standard template with background image and white background in QR code display mode.фоYou can also change the font by copying one of the files in the `/example` directory with an additional font variant from the [Roboto](https://fonts.google.com/?query=Christian+Robertson) family:а - Roboto Condensed:nts.- [`index.condensed.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.html) - white background/black background;ub- [`index.condensed.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.background.html) - white background/background image;o/- [`index.condensed.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.html) - black background/white background;ht- [`index.condensed.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.background.html) - фоновое изображение/белый фон;s:/- Roboto Mono:v.gi- [`index.mono.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.html) - white background/black background;	
+-- [`index.mono.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.background.html) - white background/background image;н; - [`index.mono.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.html) - black background/white background;.ht- [`index.mono.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.background.html) - background image/white background; - - Roboto Slab:ый ф- [`index.slab.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.html) - white background/black background;de- [`index.slab.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.background.html) - white background/background image;lin- [`index.slab.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.html) - black background/white background;lev- [`index.slab.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.background.html) - background image/white background.le<a name="creating-qr-code"></a>
+### Create a QR codedaCreate a QR code with a link to your business card site, for example, using the [QRCode Monkey](https://www.qrcode-monkey.com) online service and replace the `qrcode.png` file in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) to the image of your QR code with the same name.аше> You can create and update a QR code after [creating a business card site](#creating-business-card-site).ниThe QR code is displayed when you click on the corresponding icon in the upper right corner of the avatar.bIn the QR code display mode, the background changes to white.аз<a name="creating-business-card-site"></a>
+### Creating a business card site в[Sign up for free on GitHub](https://github.com/signup), then create a new repository (file storage location) with a name corresponding to your username (login) and enable [Github Pages](https://docs.github.com/ru/pages/quickstart):йт> After registration, click on the `+` sign in the upper right corner and click on the `New repository` menu that opens.оOn the repository creation page, in the `Owner` field, select your username and in the `Repository name` field, write your username as the repository name (username = repository name), leave a checkmark in the `Public` field, do not select anything else and click the `Create repository` button.вы>
+> On your repository page, go to the `uploading an existing file` link, drag the online business card website files from your computer into the `choose your files` field, and click the `Commit changes` button to upload the files.и>на> To enable GitHub Pages, go to your repository settings by clicking `Settings` in the menu under your repository name, then go to `Pages` in the menu on the left and change the `Branch` field from `none` to `main`, leave selected root directory `/root` and click the `Save` button.еIn a few minutes your files will be published and in the `Pages` section at the top you will see a link to your site like `username.github.io` with your username instead of `username`.остNow you can [manage business card site files with GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files) - edit text files (e.g. change `vcard.vcf` file with your contact details), upload new ones (for example, the QR code image `qrcode.png`) and delete old ones (for example, delete the `/example` directory)./working-with-files/managing-files) - редактировать текстовые файлы (например, изменить файл `vcard.vcf` с вашими контактными данными), загружать новые (например, изображение QR-кода `qrcode.png`) и удалять старые (например, удалить директорию `/example`).
