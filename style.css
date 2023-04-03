@@ -1,6 +1,10 @@
 /* Text font */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,600|Roboto+Slab:400,600&subset=cyrillic,latin);
 
+html, body, body > div {
+	height: 100%;
+}
+
 body {
 	font-family: 'Roboto', Arial, sans-serif; /* Text font */
 	font-size: 140%; /* Font size */ /* Text */
@@ -40,7 +44,7 @@ body.dark.background {
 	width: 100%;
 	margin: auto;
 	text-align: center;
-	height: calc(100vh);
+	height: 100%;
 	display: table;
 	vertical-align: middle;
 }
