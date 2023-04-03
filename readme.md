@@ -1,141 +1,141 @@
-# Онлайн визитка
+# Online business card
 
-See also [documentation in English](readme.md).
+Смотрите также [документацию на Русском](readme.ru.md).
 
-[![Скриншоты](https://grigorykovalev.github.io/online-business-card/example/example.gif)](https://grigorykovalev.github.io/online-business-card/example/example.jpg)
+[![Screenshots](https://grigorykovalev.github.io/online-business-card/example/example.gif)](https://grigorykovalev.github.io/online-business-card/example/example.jpg)
 
-> Пример сайта визитки: [grigorykovalev.github.io/online-business-card/](https://grigorykovalev.github.io/online-business-card/).
+> Example of a business card site: [grigorykovalev.github.io/online-business-card/](https://grigorykovalev.github.io/online-business-card/).
 
-- [Описание](#about)
-- [Как пользоваться](#how-to-use)
-	- [Скачивание шаблона сайта визитки](#downloading-business-card-website-template)
-	- [Редактирование контактных данных](#editing-contact-details)
-	- [Изменение аватара](#changing-your-avatar)
-	- [Изменение фона](#changing-background)
-	- [Создание QR-кода](#creating-qr-code)
-	- [Создание сайта визитки](#creating-business-card-site)
+- [Description](#about)
+- [How to use](#how-to-use)
+	- [Downloading business card site template](#downloading-business-card-website-template)
+	- [Edit contact details](#editing-contact-details)
+	- [Change avatar](#changing-your-avatar)
+	- [Change background](#changing-background)
+	- [Creating QR code](#creating-qr-code)
+	- [Creating a business card site](#creating-business-card-site)
 
 <a name="about"></a>
-## Описание
+## Description
 
-Шаблон сайта визитки, который вы можете изменить и разместить на любом хостинге, в том числе на [GitHub Pages](https://docs.github.com/ru/pages), тогда сайт вашей визитки будет доступен по адресу вида `username.github.io`, где `username` имя вашего пользователя.
+A business card site template that you can edit and place on any hosting, including on [GitHub Pages](https://docs.github.com/en/pages), then your business card site will be available at an address like `username.github.io`, where `username` is your username.
 
-Файлы в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) для базового использования:
+Files in [business card site folder](https://github.com/GrigoryKovalev/online-business-card) for basic use:
 
-- `index.html` - HTML-файл, отображающий вашу визитку.
-- `vcard.vcf` - файл в текстовом формате [vCard](https://ru.wikipedia.org/wiki/VCard) для заполнения данными вашей электронной визитки. 
-- `avatar.jpg` - аватар для замены на ваше изображение.
-- `background.jpg` - фоновое изображение для замены на ваш файл.
-- `qrcode.png` - файл QR-кода, содержащий сылку на онлайн визитку, для замены на ваш файл.
+- `index.html` - HTML file that displays your business card.
+- `vcard.vcf` - a file in text format [vCard](https://en.wikipedia.org/wiki/VCard) to fill in the data of your e-card. 
+- `avatar.jpg` - avatar to replace with your image.
+- `background.jpg` - background image to replace with your file.
+- `qrcode.png` - a QR code file containing a link to an online business card to replace it with your file.
 
 <a name="how-to-use"></a>
-## Как пользоваться
+## How to use
 
 <a name="downloading-business-card-website-template"></a>
-### Скачивание шаблона сайта визитки
+### Downloading a business card site template
 
-Вы можете скачать файлы сайта визитки по [ссылке](https://github.com/GrigoryKovalev/online-business-card/archive/refs/heads/master.zip) или перейти в [папку сайту визитки](https://github.com/GrigoryKovalev/online-business-card) и скачать ZIP-архив, нажав кнопку `Code` справа над списком файлов, а затем - `Download ZIP`.
+You can download business card website files from [link](https://github.com/GrigoryKovalev/online-business-card/archive/refs/heads/master.zip) or go to [business card website folder](https://github.com/GrigoryKovalev/online-business-card) and download the ZIP archive by clicking the `Code` button on the right above the list of files, and then `Download ZIP`.
 
 <a name="editing-contact-details"></a>
-### Редактирование контактных данных
+### Editing contact details
 
-Вы можете создать и экспортировать карточку с вашими контактными данными и аватором в [VCF-файл](https://ru.wikipedia.org/wiki/VCard) на вашем устройстве [Android](https://support.google.com/contacts/answer/7199294?hl=ru), [Apple](https://support.apple.com/ru-ru/guide/contacts/adrbdcfd32e6/mac) или с помощью онлайн-сервиса [vCard maker](https://vcardmaker.com/), а затем заменить файл `vcard.vcf` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на созданный вами с таким же названием.
+You can create and export a card with your contact details and avatar to a [VCF file](https://ru.wikipedia.org/wiki/VCard) on your [Android](https://support.google.com/contacts/answer/7199294?hl=en) device, [Apple](https://support.apple.com/en-us/guide/contacts/adrbdcfd32e6/mac) or using the online service [vCard maker](https://vcardmaker.com/), and then replace the `vcard.vcf` file in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with the one you created with the same name.
 
-Затем вы также сможете редактировать ваши контактные данные в файл `vcard.vcf` с помощью текстового редактора на компьютере (в Windows/Блокнот или macOS/TextEdit), а также изменить онлайн после [создания сайта визитки](#creating-business-card-site).
+You can then also edit your contact details in the `vcard.vcf` file using a text editor on your computer (in Windows/Notepad or macOS/TextEdit), as well as edit online after [creating a business card site](#creating-business-card-site).
 
-Ссылка на карточку с контактными данными отображается в правом верхнем углу аватара, при клике по которой на мобильном устройстве будет предложено создать новый контакт, заполненный значениями из всех полей файла `vcard.vcf`, а при клике на компьютере вы сможете скачать файл и импортировать его в ваши контакты.
+A link to a card with contact details is displayed in the upper right corner of the avatar, when you click on it on a mobile device, you will be prompted to create a new contact filled with values from all fields of the `vcard.vcf` file, and when you click on the link on a computer, you can download the file and import it to your contacts.
 
-> Обязательно добавьте аватар в файл `vcard.vcf`, если хотите чтобы он добавлялся в адресную книгу.
+> Be sure to add an avatar to the `vcard.vcf` file if you want it to be added to your address book.
 
-На сайте визитке отображаются только следующие поля из файла `vcard.vcf`:
+Only the following fields from the `vcard.vcf` file are displayed on the vCard site:
 
-- **Полное имя** - `FN:Имя Отчество Фамилия` (можно указывать не полностью), которое также содержится в поле `N:Фамилия;Имя;Отчество;Префикс;`.
-- **Псевдоним** `NICKNAME:ваш псевдоним`.
-- **Организация** - `ORG:ваша организация`. Если значение указано, то оно отображается под именем вместо псевдонима, в таком случае псевдоним отображается при клике на имя.
-- **`Email`** - `EMAIL;type=INTERNET;type=HOME;type=pref:ваш@email.dot`. Если указано несколько email-адресов (домашний, рабочий и т.д.), то отображается значения только первого email-адреса.
-- **Телефон** - `TEL;type=CELL;type=VOICE;type=pref:+7 123 456-78-90`. Если указано несколько телефонов (сотовый, домашний, рабочий и т.д.), то отображается значения только первого телефона.
-- **Ссылка** - `URL;type=pref:https://ваш-сайт.рф/`. Отображается при клике на соответствующую иконку в правом нижнем углу аватара.
-- **Заметка** - `NOTE:Краткая информация о себе`. Может содержать дополнительные ссылки, начинающиеся с `https://` или `www.`, а также символ переноса строки `\n`. Отображается при клике на соответствующую иконку в левом нижнем углу аватара.
-- **ИД социальных профайлов** - ИД (логин, телефон), полный URL-адрес или пустое значение (для отображения не кликабельной иконки): 
-	- `X-SOCIALPROFILE;type=WhatsApp:+71234567890` - телефон `+71234567890` в `WhatsApp`.
-	- `X-SOCIALPROFILE;type=Telegram:@username` - ИД `@username` в `Telegram`.
-	- `X-SOCIALPROFILE;type=Viber:+71234567890` - телефон `+71234567890` в `Viber`.
-	- `X-SOCIALPROFILE;type=VK:username` - Логин `username` в `VK`.
+- **Full Name** - `FN:First Name Middle Name Last Name` (you can specify it not in full), which is also contained in the `N:Last Name;First Name;Middle Name;Prefix;` field.
+- **Nickname** `NICKNAME:your nickname`.
+- **Organization** - `ORG:your organization`. If a value is specified, it is displayed under the name instead of the alias, in which case the alias is displayed when the name is clicked.
+- **`Email`** - `EMAIL;type=INTERNET;type=HOME;type=pref:your@email.dot`. If multiple email addresses are specified (home, work, etc.), only the values of the first email address are displayed.
+- **Phone** - `TEL;type=CELL;type=VOICE;type=pref:+7 123 456-78-90`. If several phones are specified (cellular, home, work, etc.), only the values of the first phone are displayed.
+- **Link** - `URL;type=pref:https://your-site.com/`. Displayed when you click on the corresponding icon in the lower right corner of the avatar.
+- **Note** - `NOTE:Brief information about yourself`. Can contain additional references starting with `https://` or `www.`, as well as the line break character `\n`. Displayed when you click on the corresponding icon in the bottom left corner of the avatar.
+- **ID of social profiles** - ID (login, phone), full URL or empty value (to display non-clickable icon): 
+	- `X-SOCIALPROFILE;type=WhatsApp:+71234567890` - phone `+71234567890` in `WhatsApp`.
+	- `X-SOCIALPROFILE;type=Telegram:@username` - ID `@username` in `Telegram`.
+	- `X-SOCIALPROFILE;type=Viber:+71234567890` - Phone `+71234567890` in `Viber`.
+	- `X-SOCIALPROFILE;type=VK:username` - Username `username` in `VK`.
 	- `X-SOCIALPROFILE;type=Facebook:`
 	- `X-SOCIALPROFILE;type=Instagram:`
 	- `X-SOCIALPROFILE;type=Twitter:`
 	- `X-SOCIALPROFILE;type=Flickr:`
 	- `X-SOCIALPROFILE;type=LinkedIn:`
-	- `X-SOCIALPROFILE;type=GitHub:https://github.com/username` - ссылка `https://github.com/username` на `GitHub`.
+	- `X-SOCIALPROFILE;type=GitHub:https://github.com/username` - link `https://github.com/username` to `GitHub`.
 
-> С помощью онлайн-сервиса [vCard maker](https://vcardmaker.com/) вы не сможете добавить все указанные профили социальных сетей, в таком случае необходимо будет их добавить вручную, отредактировав файл `vcard.vcf` после экспорта.
+> Using the online service [vCard maker](https://vcardmaker.com/), you will not be able to add all the specified social media profiles, in which case you will need to add them manually by editing the file `vcard.vcf` after export.
 
 <a name="changing-your-avatar"></a>
-### Изменение аватара
+### Change avatar
 
-Замените файл `avatar.jpg` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на изображение вашего аватара с таким же названием, шириной и высотой не менее `330px`, если высота будет больше чем ширина, то аватар можно будет прокручивать вниз.
+Replace the file `avatar.jpg` in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with an image of your avatar with the same name, width and height of at least `330px`, if the height is greater than the width, then the avatar can be scrolled down.
 
-> Обрезать и преобразовать изображение в `JPG` вы можете, например, с помощью онлайн-сервиса [iLoveImg](https://www.iloveimg.com/ru), а придать художественный стиль вашей фотографии - с помощью приложения [Prisma](https://prisma-ai.com).
+> You can trim and convert an image to `JPG`, for example, using the online service [iLoveImg](https://www.iloveimg.com/), and give the artistic style of your photo - using the application [Prisma](https://prisma-ai.com).
 
-Удалите или лучше замените файл `favicon.ico` на изображение вашего значка для отображения его во вкладке браузера.
+Delete or better replace the file `favicon.ico` with the image of your icon to display it in the browser tab.
 
-> Создать значок `favicon.ico` вы можете, например, с помощью онлайн сервиса [Favicon Generator](https://realfavicongenerator.net), загрузив изображение вашего аватара и скачав новый файл значка.
+> You can create an icon `favicon.ico`, for example, using the online service [Favicon Generator](https://realfavicongenerator.net), by uploading an image of your avatar and downloading a new icon file.
 
 <a name="changing-background"></a>
-### Изменение фона
+### Change background
 
-Замените файл `background.jpg` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на изображение вашего фона с таким же названием.
+Replace the `background.jpg` file in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with your background image with the same name.
 
-> Вы можете скачать обои на рабочий стол в качестве фона, например, с помощью онлайн-сервиса [Wallpapers.com](https://wallpapers.com).
+> You can download wallpapers to your desktop as a background, for example, using the online service [Wallpapers.com](https://wallpapers.com).
 
-Вы можете не использовать фоновое изображение или наоборот, использовать его только в режиме отображения [QR-кода](#creating-qr-code), для этого скопируйте один из файлов в директории `/example`, и заменить им файл `index.html` с таким же названием в папке сайта визитки:
+Optionally, you can not use a background image or vice versa, use it only in the [QR-code](#creating-qr-code) display mode, to do this, copy one of the files in the `/example` directory, and replace the `index.html` with the same name in the business card site folder:
 
-- [`index.html`](https://grigorykovalev.github.io/online-business-card/example/index.html) - шаблон с фоном белого цвета и фоном черного цвета в режиме отображения QR-кода.
-- [`index.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.background.html) - шаблон с фоном белого цвета и фоновым изображением в режиме отображения QR-кода.
-- [`index.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.html) - шаблон с фоном черного цвета и белым фоном в режиме отображения QR-кода.
-- [`index.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.background.html) - стандартный шаблон с фоновым изображением и белым фоном в режиме отображения QR-кода.
+- [`index.html`](https://grigorykovalev.github.io/online-business-card/example/index.html) - a template with a white background and a black background in the QR code display mode.
+- [`index.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.background.html) - template with white background and background image in QR code display mode.
+- [`index.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.html) - template with black background and white background in QR code display mode.
+- [`index.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.dark.background.html) - standard template with background image and white background in QR code display mode.
 
-Также вы можете изменить шрифт, скопировав один из файлов в директории `/example` с дополнительным вариантом шрифта из семейства [Roboto](https://fonts.google.com/?query=Christian+Robertson):
+You can also change the font by copying one of the files in the `/example` directory with an additional font variant from the [Roboto](https://fonts.google.com/?query=Christian+Robertson) family:
 
 - Roboto Condensed: 
 
-	- [`index.condensed.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.html) - белый фон/черный фон;
-	- [`index.condensed.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.background.html) - белый фон/фоновое изображение;
-	- [`index.condensed.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.html) - черный фон/белый фон;
+	- [`index.condensed.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.html) - white background/black background;
+	- [`index.condensed.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.background.html) - white background/background image;
+	- [`index.condensed.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.html) - black background/white background;
 	- [`index.condensed.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.condensed.dark.background.html) - фоновое изображение/белый фон;
 	
 - Roboto Mono: 
 
-	- [`index.mono.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.html) - белый фон/черный фон; 
-	- [`index.mono.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.background.html) - белый фон/фоновое изображение; 
-	- [`index.mono.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.html) - черный фон/белый фон; 
-	- [`index.mono.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.background.html) - фоновое изображение/белый фон;
+	- [`index.mono.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.html) - white background/black background; 
+	- [`index.mono.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.background.html) - white background/background image; 
+	- [`index.mono.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.html) - black background/white background; 
+	- [`index.mono.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.mono.dark.background.html) - background image/white background;
 	
 - Roboto Slab: 
 
-	- [`index.slab.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.html) - белый фон/черный фон;
-	- [`index.slab.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.background.html) - белый фон/фоновое изображение; 
-	- [`index.slab.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.html) - черный фон/белый фон; 
-	- [`index.slab.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.background.html) - фоновое изображение/белый фон.
+	- [`index.slab.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.html) - white background/black background;
+	- [`index.slab.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.background.html) - white background/background image; 
+	- [`index.slab.dark.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.html) - black background/white background; 
+	- [`index.slab.dark.background.html`](https://grigorykovalev.github.io/online-business-card/example/index.slab.dark.background.html) - background image/white background.
 
 <a name="creating-qr-code"></a>
-### Создание QR-кода
+### Create a QR code
 
-Создайте QR-код с ссылкой на сайт вашей визитки, например, с помощью онлайн-сервиса [QRCode Monkey](https://www.qrcode-monkey.com) и замените файл `qrcode.png` в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) на изображение вашего QR-кода с таким же названием. 
+Create a QR code with a link to your business card site, for example, using the [QRCode Monkey](https://www.qrcode-monkey.com) online service and replace the `qrcode.png` file in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) to the image of your QR code with the same name. 
 
-> Вы можете создать и обновить QR-код после [создания сайта визитки](#creating-business-card-site).
+> You can create and update a QR code after [creating a business card site](#creating-business-card-site).
 
-QR-код отображается при клике на соответствующую иконку в правом верхнем углу аватара. В режиме отображения QR-кода фон меняется на белый цвет.
+The QR code is displayed when you click on the corresponding icon in the upper right corner of the avatar. In the QR code display mode, the background changes to white.
 
 <a name="creating-business-card-site"></a>
-### Создание сайта визитки
+### Creating a business card site
 
-[Зарегестрируйтесь бесплатно на GitHub](https://github.com/signup), затем создайте новый репозиторий (место хранения файлов) с именем соответствующим вашему имени пользователя (логину) и включите в настройках [Github Pages](https://docs.github.com/ru/pages/quickstart):
+[Sign up for free on GitHub](https://github.com/signup), then create a new repository (file storage location) with a name corresponding to your username (login) and enable [Github Pages](https://docs.github.com/ru/pages/quickstart):
 
-> После регистрации, нажмите в правом верхнем углу знак `+` и нажмите в открывшемся меню `New repository`. На странице создания репозитория в поле `Owner` выберите ваше имя пользователя и в поле `Repository name` в качестве имени репозитория напишите ваше имя пользователя (имя пользователя = имени репозитория), оставьте галочку в поле `Public`, ничего больше не выбирайте и нажмите кнопку `Create repository`. 
+> After registration, click on the `+` sign in the upper right corner and click on the `New repository` menu that opens. On the repository creation page, in the `Owner` field, select your username and in the `Repository name` field, write your username as the repository name (username = repository name), leave a checkmark in the `Public` field, do not select anything else and click the `Create repository` button. 
 >
-> На странице вашего репозитория перейдите по ссылке `uploading an existing file`, перетащите файлы сайта визитки с вашего компьютера в поле `choose your files` и нажмите кнопку `Commit changes` для загрузки файлов.
+> On your repository page, go to the `uploading an existing file` link, drag the online business card website files from your computer into the `choose your files` field, and click the `Commit changes` button to upload the files.
 > 
-> Для включения GitHub Pages перейдите в настройки репозитория, нажав `Settings` в меню под названием вашего репозитория, затем перейдите в раздел `Pages` в меню слева и в поле `Branch` поменяйте значение `none` на главную ветку `main`, оставьте выбранную корневую директорию `/root` и нажмите кнопку `Save`. Через несколько минут ваши файлы опубликуются и в разделе `Pages` на верху отобразиться ссылка на ваш сайт вида `username.github.io`, где вместо `username` будет ваше имя пользователя. 
+> To enable GitHub Pages, go to your repository settings by clicking `Settings` in the menu under your repository name, then go to `Pages` in the menu on the left and change the `Branch` field from `none` to `main`, leave selected root directory `/root` and click the `Save` button. In a few minutes your files will be published and in the `Pages` section at the top you will see a link to your site like `username.github.io` with your username instead of `username`. 
 
-Теперь вы можете [управлять файлами сайта визитки с помощью GitHub](https://docs.github.com/ru/repositories/working-with-files/managing-files) - редактировать текстовые файлы (например, изменить файл `vcard.vcf` с вашими контактными данными), загружать новые (например, изображение QR-кода `qrcode.png`) и удалять старые (например, удалить директорию `/example`).
+Now you can [manage business card site files with GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files) - edit text files (e.g. change `vcard.vcf` file with your contact details), upload new ones (for example, the QR code image `qrcode.png`) and delete old ones (for example, delete the `/example` directory).
