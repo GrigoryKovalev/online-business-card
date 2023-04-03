@@ -1,11 +1,6 @@
 /* Text font */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,600|Roboto+Slab:400,600&subset=cyrillic,latin);
 
-html, body, body > div {
-	height: 100vh;
-	height: -webkit-fill-available;
-}
-
 body {
 	font-family: 'Roboto', Arial, sans-serif; /* Text font */
 	font-size: 140%; /* Font size */ /* Text */
@@ -45,8 +40,7 @@ body.dark.background {
 	width: 100%;
 	margin: auto;
 	text-align: center;
-	height: 100vh;
-	height: -webkit-fill-available;
+	height: calc(100vh);
 	display: table;
 	vertical-align: middle;
 }
@@ -212,6 +206,7 @@ body.dark .vcard h1 small {
 		display: block;
 		background: rgba(255, 255, 255, 0.5);
 		width: 100%;
+		height: calc(100vh);
 	}
 	
 	body.dark > div {
