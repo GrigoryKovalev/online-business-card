@@ -18,7 +18,7 @@
 <a name="about"></a>
 ## Description
 
-[Card website template](#download-business-card-website-template), which you can change and place on any hosting, including [GitHub Pages](https://docs.github.com/en/pages), then your business card site will be available at a URL like `username.github.io`, where `username` is your username.
+[Digital business card template](#download-business-card-website-template), which you can modify and place on any hosting, including [GitHub Pages](https://docs.github.com/ru/pages), then the site of your electronic business card will be available at the address of the form `username.github.io`, where `username` is your username.
 
 Files in [business card site folder](https://github.com/GrigoryKovalev/online-business-card) for basic use:
 

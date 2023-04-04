@@ -18,7 +18,7 @@
 <a name="about"></a>
 ## Описание
 
-[Шаблон сайта визитки](#download-business-card-website-template), который вы можете изменить и разместить на любом хостинге, в том числе на [GitHub Pages](https://docs.github.com/ru/pages), тогда сайт вашей визитки будет доступен по адресу вида `username.github.io`, где `username` имя вашего пользователя.
+[Шаблон цифровой визитки](#download-business-card-website-template), который вы можете изменить и разместить на любом хостинге, в том числе на [GitHub Pages](https://docs.github.com/ru/pages), тогда сайт вашей электронной визитки будет доступен по адресу вида `username.github.io`, где `username` имя вашего пользователя.
 
 Файлы в [папке сайта визитки](https://github.com/GrigoryKovalev/online-business-card) для базового использования:
 
