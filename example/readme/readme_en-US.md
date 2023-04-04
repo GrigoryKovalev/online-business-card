@@ -33,7 +33,7 @@ Files in [business card site folder](https://github.com/GrigoryKovalev/online-bu
 <a name="download-business-card-website-template"></a>
 ### Download the business card site template
 
-You can download business card website files from [link](https://github.com/GrigoryKovalev/online-business-card/archive/refs/heads/master.zip) or go to [business card website folder](https://github.com/GrigoryKovalev/online-business-card) and download the ZIP archive by clicking the `Code` button on the right above the list of files, and then `Download ZIP`.
+Вы можете скачать файлы сайта визитки по [ссылке](https://github.com/GrigoryKovalev/online-business-card/archive/refs/heads/master.zip) или перейти в [папку сайта визитки](https://github.com/GrigoryKovalev/online-business-card) и скачать ZIP-архив, нажав кнопку `Code` справа над списком файлов, а затем - `Download ZIP`.
 
 <a name="add-contact-details"></a>
 ### Add your contact details
