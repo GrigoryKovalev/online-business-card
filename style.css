@@ -42,7 +42,6 @@ body.dark.background {
 	text-align: center;
 	height: calc(100vh);
 	display: table;
-	vertical-align: middle;
 }
 
 body.dark .main {

@@ -91,13 +91,19 @@ $(function () {
 			
 			if (vcard.fn) {
 				$('#fn').text(vcard.fn);
-				$('title').text(vcard.fn);
+
+				if (!$('title').text()) {
+					$('title').text(vcard.fn);
+				}
 			}
 			
 			if (vcard.org) {
 				if (!vcard.fn && !vcard.nickname) {
 					$('#fn').text(vcard.org);
-					$('title').text(vcard.org);
+					
+					if (!$('title').text()) {
+						$('title').text(vcard.org);
+					}
 				} else {
 					$('#org').text(vcard.org).removeClass('is-hidden');
 				}
@@ -106,7 +112,10 @@ $(function () {
 			if (vcard.nickname) {
 				if (!vcard.fn) {
 					$('#fn').text(vcard.nickname).removeAttr('data-toggle');
-					$('title').text(vcard.nickname);
+					
+					if (!$('title').text()) {
+						$('title').text(vcard.nickname);
+					}
 				} else if (!vcard.org) {
 					$('#fn').removeAttr('data-toggle');
 					$('#org').text(vcard.nickname).removeClass('is-hidden');
