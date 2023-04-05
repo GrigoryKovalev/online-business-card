@@ -25,7 +25,7 @@ $(function () {
 	});
 
 	// Get vCard data
-	$.get($('#vcard-link').attr('href'), function( data ) {	
+	$.get($('#vcard-link').attr('href'), function( data ) {		
 		let vcard = {},
 		
 			// Social profile IDs 
@@ -196,7 +196,32 @@ $(function () {
 				
 				$id.removeClass('is-hidden');
 			});	
-		}			
+		}	
+		
+		// Examples
+		
+		if (window.location.pathname.search(/^\/example\//) != -1) {
+			$('.vcard').prepend($('<select>', {style: 'margin-bottom: 30px; border-radius: 3px;)'}).on('change', function() {
+				window.location.href=this.value;
+			}));
+			
+			let files = {
+					'Roboto': ['index.html', 'index.background.html', 'index.dark.html', 'index.dark.background.html'],
+					'Roboto Condensed': ['index.condensed.html', 'index.condensed.background.html', 'index.condensed.dark.html', 'index.condensed.dark.background.html'],
+					'Roboto Mono': ['index.mono.html', 'index.mono.background.html', 'index.mono.dark.html', 'index.mono.dark.background.html'],
+					'Roboto Slab': ['index.slab.html', 'index.slab.background.html', 'index.slab.dark.html', 'index.slab.dark.background.html'],
+				};
+			
+			$.each(files, function(group, values) {	
+				let $optgroup = $('<optgroup>', {label: group});
+			
+				$.each(values, function(index, value) {
+					$optgroup.append($('<option>', {value: value, text: value, selected: value === window.location.pathname.replace(/^\/?[^\/]*\//, '') ? true : false}));
+				});
+				
+				$('.vcard select').append($optgroup);
+			});
+		}		
 	});
 });
 
