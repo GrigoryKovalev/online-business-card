@@ -216,7 +216,7 @@ $(function () {
 				let $optgroup = $('<optgroup>', {label: group});
 			
 				$.each(values, function(index, value) {
-					$optgroup.append($('<option>', {value: value, text: value, selected: value === window.location.pathname.replace(/^\/?[^\/]*\//, '') ? true : false}));
+					$optgroup.append($('<option>', {value: value, text: value, selected: value === window.location.pathname.replace(/^.*\/([^\/]+)/, "$1") ? true : false}));
 				});
 				
 				$('.vcard select').append($optgroup);
