@@ -198,7 +198,7 @@ $(function () {
 			});	
 		}	
 		
-		// Examples
+		// Example
 		
 		if (window.location.pathname.search(/\/example\/index\./) != -1) {
 			$('.vcard').prepend($('<select>', {style: 'margin-bottom: 30px; border-radius: 3px;)'}).on('change', function() {
