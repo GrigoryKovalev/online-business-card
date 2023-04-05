@@ -151,7 +151,7 @@ $(function () {
 		if (vcard.url) {
 			$('#url').attr('href', '//' + vcard.url).removeClass('is-hidden');
 
-			if (vcard.url.search(new RegExp('^' + document.location.host + '\/?$')) !== -1) {
+			if (vcard.url.search(new RegExp('' + document.location.host + '(\/|$)')) !== -1) {
 				$('#url').removeAttr('target');
 			}
 		}
