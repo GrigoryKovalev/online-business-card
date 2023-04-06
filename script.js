@@ -1,23 +1,4 @@
 $(function () {	
-	// Dynamically change the theme and font using a hash from the URL	
-	if (window.location.hash) {
-		let classes = [
-				'classic', 'dark', 'background', 'condensed', 'mono', 'slab',
-			];
-		
-		$.each(window.location.hash.replace(/^#/,"").trim().split('-'), function(index, hash) {
-			if (classes.includes(hash)) {
-				if ($('#body').attr('data-class') === undefined) {
-					$('#body').attr('data-class', $('#body').attr('class'));
-					
-					$('#body').removeClass(classes.join(' '));
-				}
-			
-				$('#body').addClass(hash);
-			}
-		});
-	}
-
 	// Make avatar image height equal to width
 		
 	$('#round').css('width', $('#round').width());
@@ -213,24 +194,29 @@ $(function () {
 		
 		// Example
 		
-		if (window.location.pathname.search(/\/(about|example)\//) != -1) {
+		if (window.location.pathname.search(/\/example\//) != -1) {
 			$('.vcard').prepend($('<select>', {style: 'margin-bottom: 30px; border-radius: 3px;)'}).on('change', function() {
 				window.location.href=this.value;
 			}));
 			
-			let files = {
-					'Classic': ['index.classic.html', 'index.classic.background.html', 'index.classic.dark.html', 'index.classic.dark.background.html'],
-					'Roboto': ['index.html', 'index.background.html', 'index.dark.html', 'index.dark.background.html'],
-					'Roboto Condensed': ['index.condensed.html', 'index.condensed.background.html', 'index.condensed.dark.html', 'index.condensed.dark.background.html'],
-					'Roboto Mono': ['index.mono.html', 'index.mono.background.html', 'index.mono.dark.html', 'index.mono.dark.background.html'],
-					'Roboto Slab': ['index.slab.html', 'index.slab.background.html', 'index.slab.dark.html', 'index.slab.dark.background.html'],
-				};
+			let pathname = window.location.pathname.replace(/^.*\/([^\/]*)/, "$1"),
+				files = {
+				'Classic': ['index.classic.html', 'index.classic.background.html', 'index.classic.dark.html', 'index.classic.dark.background.html'],
+				'Roboto': ['index.html', 'index.background.html', 'index.dark.html', 'index.dark.background.html'],
+				'Roboto Condensed': ['index.condensed.html', 'index.condensed.background.html', 'index.condensed.dark.html', 'index.condensed.dark.background.html'],
+				'Roboto Mono': ['index.mono.html', 'index.mono.background.html', 'index.mono.dark.html', 'index.mono.dark.background.html'],
+				'Roboto Slab': ['index.slab.html', 'index.slab.background.html', 'index.slab.dark.html', 'index.slab.dark.background.html'],
+			};
+			
+			if (!pathname) {
+				pathname = 'index.html';
+			}
 			
 			$.each(files, function(group, values) {	
 				let $optgroup = $('<optgroup>', {label: group});
 			
 				$.each(values, function(index, value) {
-					$optgroup.append($('<option>', {value: value, text: value, selected: value === window.location.pathname.replace(/^.*\/([^\/]+)/, "$1") ? true : false}));
+					$optgroup.append($('<option>', {value: value, text: value, selected: value === pathname ? true : false}));
 				});
 				
 				$('.vcard select').append($optgroup);
@@ -238,4 +224,3 @@ $(function () {
 		}		
 	});
 });
-
