@@ -10,16 +10,18 @@ body {
 	margin: 0;
 }
 
-body.condensed {
-	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
+body:not(.classic) .vcard > .grid-x {
+	display: block;
+	padding: 0;
 }
 
-body.mono {
-	font-family: 'Roboto Mono', Arial, sans-serif; /* Text font */
+body:not(.classic) .vcard > .grid-x > .cell {
+	display: block;
+	padding: 0;
 }
 
-body.slab {
-	font-family: 'Roboto Slab', Arial, sans-serif; /* Text font */
+body.classic {
+	font-size: 100%; /* Classic theme font size */ /* Text */
 }
 
 body.dark {
@@ -32,16 +34,33 @@ body.dark.background {
 	background-color: rgb(15, 15, 15);
 }
 
+body.condensed {
+	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
+}
+
+body.mono {
+	font-family: 'Roboto Mono', Arial, sans-serif; /* Text font */
+}
+
+body.slab {
+	font-family: 'Roboto Slab', Arial, sans-serif; /* Text font */
+}
+
 .main {
+	max-width: 390px; /* Card width = width + 60px (padding left and right). Change with the `.head .round {max-height: 330px;}` */
 	color: black; /* Font color */ /* Text */
 	background-color: rgba(255, 255, 255, 0.5);
 	
-	max-width: 390px; /* Card width = width + 60px (padding left and right). Change with the `.head .round {max-height: 330px;}` */
 	width: 100%;
 	margin: auto;
 	text-align: center;
 	height: calc(100vh);
 	display: table;
+}
+
+.classic .main, body.classic.dark .main {
+	max-width: 590px; /* Classic theme card width = width + 60px (padding left and right). Change with the `.classic .head {max-width: 230px;}` */
+	background-color: transparent;
 }
 
 body.dark .main {
@@ -72,14 +91,40 @@ body.dark .vcard a:hover,
 body.dark .vcard a:active {
 	color: white; /* Dark theme font color */ /* Links */
 }
+
+.classic .vcard > .grid-x {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px solid #cacaca;
+	
+	margin-left: -30px;
+	margin-right: -30px;
+	padding: 30px;
+}
+
+body.dark.classic .vcard > .grid-x {
+	background-color: rgba(15, 15, 15, 0.5);
+	border: 1px solid #8a8a8a;
+}
+
+body.dark.background .vcard > .grid-x {
+	border: 0;
+}
+
+.classic .vcard > .grid-x > .cell > div + div {
+	margin-top: 5px;
+}
 		
 .head {
 	position: relative;
 }
 
+.classic .head {
+	max-width: 230px; /* Classic theme head width. Change with the `.classic .main {max-width: 590px;}` */
+}
+
 .head .round {
-	width: 100%;
-	max-height: 330px;
+	max-height: 330px; /* Round height = card width - 60px (card padding). Change with the `.main {max-width: 390px;}` */
+	
 	border-radius: 50%;
 	overflow-y: auto; 	
 	-ms-overflow-style: none; 
@@ -98,19 +143,25 @@ body.dark .vcard a:active {
 }
 
 body.dark .head .round.text {
-	background-color: rgba(255, 255, 255, 0.1);
 	color: white; /* Dark theme font color */ /* Note */
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.classic .head .round {
+	max-height: 230px; /* Classic theme round height. Change with the `.classic .head {max-width: 230px;}` */
 }
 
 .head .note {
+	font-size: 75%; /* Font size */ /* Note */
+
 	display: block;
 	padding: 45px;
-	font-size: 75%; /* Font size */ /* Note */
 }
 
 .head img.qrcode {
-	padding: 45px;
 	background-color: rgb(255, 255, 255);
+	
+	padding: 45px;
 }
 
 .head .vcard-link, 
@@ -152,12 +203,15 @@ body.dark .head .round.text {
 }
 
 .vcard h1 {
+	font-size: 150%; /* Font size */ /* Name */	
 	font-family: inherit;
-	font-size: 150%; /* Font size */ /* Name */
+}
+
+.vcard h1.name {
 	font-weight: inherit;
 	padding-bottom: 15px;
 	max-width: inherit;
-	
+	margin-top: 15px;
 }
 
 .vcard h1.name-border {
@@ -169,18 +223,19 @@ body.dark .head .round.text {
 }
 
 .vcard h1 small {
-	display: block;
 	font-size: 50%; /* Font size */ /* Nickname */
 	color: #8a8a8a; /* Font color */ /* Nickname */
+	
+	display: block;
 	line-height: 1.5;
+}
+
+.classic .vcard h1 small {
+	font-size: 60%; /* Classic theme font size */ /* Nickname */
 }
 
 body.dark .vcard h1 small {
 	color: #cacaca; /* Dark theme font color */ /* Nickname */
-}
-
-.vcard .head + h1.name {
-	margin-top: 15px;
 }
 
 .vcard h1 + div {
@@ -198,4 +253,16 @@ body.dark .vcard h1 small {
 
 .vcard .social a:not([href]) {
 	cursor: inherit;
+}
+
+@media all and (min-width: 640px) {
+	.classic .vcard h1.name {
+		margin-top: 0;
+	}
+}
+
+@media all and (max-width: 639px) {
+	.classic .main, body.classic.dark .main {
+		max-width: 300px;
+	}
 }

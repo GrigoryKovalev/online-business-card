@@ -25,71 +25,77 @@
 	<div>
 		<div class="main">
 			<div class="vcard">
-				<div class="head">
-					<a href="vcard.vcf" id="vcard-link" class="vcard-link is-hidden">
-						<i class="fa-solid fa-address-card fa-lg"></i>
-					</a>
-					<span id="qrcode-link" data-toggle="avatar qrcode note-link body" data-toggler=".is-hidden" class="qrcode-link is-hidden">
-						<i class="fa-solid fa-qrcode fa-lg"></i>
-					</span>
-					<div id="round" data-toggler=".text" class="round">
-						<img src="avatar.jpg" id="avatar" data-toggler=".is-hidden" class="avatar">
+				<div class="grid-x grid-padding-x align-center">
+					<div class="cell shrink align-self-middle">					
+						<div class="head">
+							<a href="vcard.vcf" id="vcard-link" class="vcard-link is-hidden">
+								<i class="fa-solid fa-address-card fa-lg"></i>
+							</a>
+							<span id="qrcode-link" data-toggle="avatar qrcode note-link body" data-toggler=".is-hidden" class="qrcode-link is-hidden">
+								<i class="fa-solid fa-qrcode fa-lg"></i>
+							</span>
+							<div id="round" data-toggler=".text" class="round">
+								<img src="avatar.jpg" id="avatar" data-toggler=".is-hidden" class="avatar">
 					
-						<!-- https://www.qrcode-monkey.com -->
-						<img src="qrcode.png" id="qrcode" data-toggle="avatar body qrcode note-link" data-toggler=".is-hidden" class="qrcode is-hidden">
-						<!-- end -->
+								<!-- https://www.qrcode-monkey.com -->
+								<img src="qrcode.png" id="qrcode" data-toggle="avatar body qrcode note-link" data-toggler=".is-hidden" class="qrcode is-hidden">
+								<!-- end -->
 					
-						<span id="note" data-toggler=".is-hidden" class="note is-hidden"></span>
+								<span id="note" data-toggler=".is-hidden" class="note is-hidden"></span>
+							</div>
+							<span id="note-link" data-toggle="avatar note round qrcode-link" data-toggler=".is-hidden" class="note-link is-hidden">
+								<i class="fa-solid fa-circle-info fa-lg"></i>
+							</span>
+							<a href="/" target="_blank" id="url" class="url is-hidden">
+								<i class="fa-solid fa-link fa-lg"></i>
+							</a>
+						</div>
 					</div>
-					<span id="note-link" data-toggle="avatar note round qrcode-link" data-toggler=".is-hidden" class="note-link is-hidden">
-						<i class="fa-solid fa-circle-info fa-lg"></i>
-					</span>
-					<a href="/" target="_blank" id="url" class="url is-hidden">
-						<i class="fa-solid fa-link fa-lg"></i>
-					</a>
-				</div>
-				<h1 id="name" class="name is-hidden">
-					<span data-toggle="fn nickname" id="fn" data-toggler=".is-hidden" class="fn"></span>
-					<span id="nickname" data-toggle="nickname fn" data-toggler=".is-hidden" class="nickname is-hidden"></span>
-					<small class="is-hidden" id="org" class="org"></small>
-				</h1>
-				<div id="tel" class="tel is-hidden">
-					<a href="tel:"></a>
-				</div>
-				<div id="email" class="email is-hidden">
-					<a href="mailto:"></a>
-				</div>
-				<div id="social" class="social is-hidden">
-					<a href="//wa.me/" target="_blank" title="WhatsApp" id="whatsapp" class="is-hidden">
-						<i class="fa-brands fa-whatsapp fa-lg"></i>
-					</a> 
-					<a href="//t.me/" target="_blank" title="Telegram" id="telegram" class="is-hidden">
-						<i class="fa-brands fa-telegram fa-lg"></i>
-					</a>
-					<a href="viber://chat?number=" target="_blank" title="Viber" id="viber" class="is-hidden">
-						<i class="fa-brands fa-viber fa-lg"></i>
-					</a>
-					<a href="//vk.com/" target="_blank" title="VK" id="vk" class="is-hidden">
-						<i class="fa-brands fa-vk fa-lg"></i>
-					</a>
-					<a href="//facebook.com/" target="_blank" title="Facebook" id="facebook" class="is-hidden">
-						<i class="fa-brands fa-facebook fa-lg"></i>
-					</a>
-					<a href="//instagram.com/" target="_blank" title="Instagram" id="instagram" class="is-hidden">
-						<i class="fa-brands fa-instagram fa-lg"></i>
-					</a>	
-					<a href="//twitter.com/" target="_blank" title="Twitter" id="twitter" class="is-hidden">
-						<i class="fa-brands fa-twitter fa-lg"></i>
-					</a>
-					<a href="//flickr.com/" target="_blank" title="Flickr" id="flickr" class="is-hidden">
-						<i class="fa-brands fa-flickr fa-lg"></i>
-					</a>
-					<a href="//linkedin.com/in/" target="_blank" title="LinkedIn" id="linkedin" class="is-hidden">
-						<i class="fa-brands fa-linkedin fa-lg"></i>
-					</a>
-					<a href="//github.com/" target="_blank" title="GitHub" id="github" class="is-hidden">
-						<i class="fa-brands fa-github fa-lg"></i>
-					</a>
+					<div class="cell medium-auto align-self-middle">
+						<h1 id="name" class="name is-hidden">
+							<span data-toggle="fn nickname" id="fn" data-toggler=".is-hidden" class="fn"></span>
+							<span id="nickname" data-toggle="nickname fn" data-toggler=".is-hidden" class="nickname is-hidden"></span>
+							<small class="is-hidden" id="org" class="org"></small>
+						</h1>
+						<div id="tel" class="tel is-hidden">
+							<a href="tel:"></a>
+						</div>
+						<div id="email" class="email is-hidden">
+							<a href="mailto:"></a>
+						</div>
+						<div id="social" class="social is-hidden">
+							<a href="//wa.me/" target="_blank" title="WhatsApp" id="whatsapp" class="is-hidden">
+								<i class="fa-brands fa-whatsapp fa-lg"></i>
+							</a> 
+							<a href="//t.me/" target="_blank" title="Telegram" id="telegram" class="is-hidden">
+								<i class="fa-brands fa-telegram fa-lg"></i>
+							</a>
+							<a href="viber://chat?number=" target="_blank" title="Viber" id="viber" class="is-hidden">
+								<i class="fa-brands fa-viber fa-lg"></i>
+							</a>
+							<a href="//vk.com/" target="_blank" title="VK" id="vk" class="is-hidden">
+								<i class="fa-brands fa-vk fa-lg"></i>
+							</a>
+							<a href="//facebook.com/" target="_blank" title="Facebook" id="facebook" class="is-hidden">
+								<i class="fa-brands fa-facebook fa-lg"></i>
+							</a>
+							<a href="//instagram.com/" target="_blank" title="Instagram" id="instagram" class="is-hidden">
+								<i class="fa-brands fa-instagram fa-lg"></i>
+							</a>	
+							<a href="//twitter.com/" target="_blank" title="Twitter" id="twitter" class="is-hidden">
+								<i class="fa-brands fa-twitter fa-lg"></i>
+							</a>
+							<a href="//flickr.com/" target="_blank" title="Flickr" id="flickr" class="is-hidden">
+								<i class="fa-brands fa-flickr fa-lg"></i>
+							</a>
+							<a href="//linkedin.com/in/" target="_blank" title="LinkedIn" id="linkedin" class="is-hidden">
+								<i class="fa-brands fa-linkedin fa-lg"></i>
+							</a>
+							<a href="//github.com/" target="_blank" title="GitHub" id="github" class="is-hidden">
+								<i class="fa-brands fa-github fa-lg"></i>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>	
 		</div>

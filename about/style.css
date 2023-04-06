@@ -1,0 +1,30 @@
+.about, .example {
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.about {
+	background-color: white;
+}
+
+.about > div {
+	height: 100%;
+	margin: auto;
+	display: table;
+	padding: 30px;
+}
+
+.about > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media all and (max-width: 639px) {
+	.about, .example {
+		height: 100%;
+	}
+
+	.about {
+		font-size: 75%;
+	}
+}
