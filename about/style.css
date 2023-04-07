@@ -34,8 +34,8 @@
 }
 
 @media all and (max-width: 1278px) {
-	body {
-		font-size: 120%;
+	about {
+		font-size: 85%;
 	}
 
 	.classic .vcard h1.name {

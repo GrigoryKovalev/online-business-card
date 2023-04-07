@@ -260,6 +260,11 @@ body.dark .vcard h1 small {
 	cursor: inherit;
 }
 
+.vcard .email {
+	word-wrap: break-word;
+    word-break: break-all;
+}
+
 @media all and (min-width: 640px) {
 	.classic .vcard h1.name {
 		margin-top: 0;
