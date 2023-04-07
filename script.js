@@ -6,12 +6,14 @@ $(function () {
 			let isChanged = false,
 				hashes = window.location.hash.split('.').splice(0, 10),
 				classes = [
-				'classic', 'dark', 'background', 'condensed', 'mono', 'slab'
+					'classic', 'dark', 'background', 'condensed', 'mono', 'slab'
 			];
 
 			$('body').attr('class', '');
 								
 			$.each(hashes, function(name, value) {	
+				value = value.trim().replace(/^#/, '');
+			
 				if (classes.includes(value)) {
 					$('body').addClass(value);
 					
