@@ -34,16 +34,16 @@
 }
 
 @media all and (max-width: 1278px) {
-	about {
-		font-size: 85%;
-	}
-
 	.classic .vcard h1.name {
 		margin-top: 15px;
 	}
 
 	.classic .main, body.classic.dark .main {
 		max-width: 300px;
+	}
+	
+	about {
+		font-size: 85%;
 	}
 	
 	.about h1 {
