@@ -28,3 +28,13 @@
 		font-size: 75%;
 	}
 }
+
+@media all and (max-width: 1278px) {
+	.classic .vcard h1.name {
+		margin-top: 15px;
+	}
+
+	.classic .main, body.classic.dark .main {
+		max-width: 300px;
+	}
+}

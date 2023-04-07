@@ -1,4 +1,45 @@
 $(function () {	
+	// Change theme by hash from url
+
+	let changeTheme = () => {
+		if (window.location.hash) {
+			let isChanged = false,
+				hashes = window.location.hash.split('.').splice(0, 10),
+				classes = [
+				'classic', 'dark', 'background', 'condensed', 'mono', 'slab'
+			];
+
+			$('body').attr('class', '');
+								
+			$.each(hashes, function(name, value) {	
+				if (classes.includes(value)) {
+					$('body').addClass(value);
+					
+					isChanged = true;
+				}
+			});
+			
+			if (hashes.includes('classic')) {
+				$('#round').css('width', '');	
+			} else {
+				$('#round').css('width', '');			
+			}
+			
+			$('#round').css('width', $('#round').width());
+			$('#round').css('height', $('#round').width());
+			
+			if (isChanged && $('.to-index').length) {
+				$('.to-index').attr('href', $('.to-index').attr('href').replace(/#.*/, '') +  hashes.join('.'))
+			}
+			
+			return isChanged;
+		}
+		
+		return false;
+	};
+	
+	changeTheme();
+
 	// Make avatar image height equal to width
 		
 	$('#round').css('width', $('#round').width());
@@ -194,9 +235,15 @@ $(function () {
 		
 		// Example
 		
-		if (window.location.pathname.search(/\/example\//) != -1) {
+		if (window.location.pathname.search(/\/(about|example)\//) != -1) {
+			let isAbout = window.location.pathname.search(/\/about\//) != -1 ? true : false;
+		
 			$('.vcard').prepend($('<select>', {style: 'margin-bottom: 30px; border-radius: 3px;)'}).on('change', function() {
-				window.location.href=this.value;
+				window.location.href = this.value;
+				
+				if (changeTheme()) {
+					//location.reload();
+				}
 			}));
 			
 			let pathname = window.location.pathname.replace(/^.*\/([^\/]*)/, "$1"),
@@ -209,14 +256,14 @@ $(function () {
 			};
 			
 			if (!pathname) {
-				pathname = 'index.html';
+				pathname = (isAbout) ? 'index.condensed.dark.background.html' : 'index.html';
 			}
-			
+
 			$.each(files, function(group, values) {	
 				let $optgroup = $('<optgroup>', {label: group});
 			
 				$.each(values, function(index, value) {
-					$optgroup.append($('<option>', {value: value, text: value, selected: value === pathname ? true : false}));
+					$optgroup.append($('<option>', {value: (isAbout ? '#' : '') + value, text: value, selected: value === pathname ? true : false}));
 				});
 				
 				$('.vcard select').append($optgroup);
