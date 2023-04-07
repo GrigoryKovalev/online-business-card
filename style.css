@@ -138,6 +138,11 @@ body.dark.background .vcard > .grid-x {
 	background: transparent;
 }
 
+.head .round .avatar.full {
+	max-height: 100%;
+	width: auto;
+}
+
 .head .round.text {
 	background-color: rgba(15, 15, 15, 0.1);
 }
