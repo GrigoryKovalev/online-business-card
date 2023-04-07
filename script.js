@@ -41,6 +41,10 @@ $(function () {
 	};
 	
 	let isChanged = changeTheme();
+	
+	window.addEventListener('hashchange', function(e) {
+		changeTheme();
+	});
 
 	// Make avatar image height equal to width
 		
