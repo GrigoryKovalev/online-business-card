@@ -126,7 +126,7 @@ body.dark.background .vcard > .grid-x {
 	max-height: 330px; /* Round height = card width - 60px (card padding). Change with the `.main {max-width: 390px;}` */
 	
 	border-radius: 50%;
-	overflow-y: auto; 	
+	overflow-y: hidden; 	
 	-ms-overflow-style: none; 
 	scrollbar-width: none; 
 	overflow: -moz-scrollbars-none;

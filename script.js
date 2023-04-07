@@ -49,6 +49,16 @@ $(function () {
 		$('#round').css('width', '100%');
 		$('#round').css('height', $('#round').width());
 	});
+
+	$('#avatar').on('click', function() {
+		if ($('#avatar').height() > $('#round').height()) {
+			$('#avatar').css('height', '100%');
+			$('#avatar').css('width', 'auto');
+		} else {
+			$('#avatar').css('width', '100%');
+			$('#avatar').css('height', 'auto');
+		}
+	});
 	
 	// Show QR code link if it exists
 	$.get($('#vcard-link').attr('href'), function() {

@@ -72,7 +72,7 @@ Only the following fields from the `vcard.vcf` file are displayed on the vCard s
 <a name="add-your-avatar"></a>
 ### Add an avatar
 
-Replace the file `avatar.jpg` in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with an image of your avatar with the same name, width and height of at least `330px`, if the height is greater than the width, then the avatar can be scrolled down.
+Replace the file `avatar.jpg` in the [business card site folder](https://github.com/GrigoryKovalev/online-business-card) with an image of your avatar with the same name, width and height of at least `330px`, if the height is greater than the width, then only by clicking the avatar will be displayed in full.
 
 > You can trim and convert an image to `JPG`, for example, using the online service [iLoveImg](https://www.iloveimg.com/), and give the artistic style of your photo - using the application [Prisma](https://prisma-ai.com).
 
