@@ -38,7 +38,7 @@ $(function () {
 		return false;
 	};
 	
-	changeTheme();
+	let isChanged = changeTheme();
 
 	// Make avatar image height equal to width
 		
@@ -241,9 +241,7 @@ $(function () {
 			$('.vcard').prepend($('<select>', {style: 'margin-bottom: 30px; border-radius: 3px;)'}).on('change', function() {
 				window.location.href = this.value;
 				
-				if (changeTheme()) {
-					//location.reload();
-				}
+				changeTheme();
 			}));
 			
 			let pathname = window.location.pathname.replace(/^.*\/([^\/]*)/, "$1"),
@@ -254,6 +252,10 @@ $(function () {
 				'Roboto Mono': ['index.mono.html', 'index.mono.background.html', 'index.mono.dark.html', 'index.mono.dark.background.html'],
 				'Roboto Slab': ['index.slab.html', 'index.slab.background.html', 'index.slab.dark.html', 'index.slab.dark.background.html'],
 			};
+
+			if (isChanged) {
+				pathname = window.location.hash.replace('#', '');
+			}
 			
 			if (!pathname) {
 				pathname = (isAbout) ? 'index.condensed.dark.background.html' : 'index.html';
