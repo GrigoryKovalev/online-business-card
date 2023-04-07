@@ -23,9 +23,13 @@
 	.about, .example {
 		height: 100%;
 	}
-
+	
 	.about {
 		font-size: 75%;
+	}
+	
+	.about h1 {
+		font-size: 1.5rem;
 	}
 }
 
@@ -36,5 +40,13 @@
 
 	.classic .main, body.classic.dark .main {
 		max-width: 300px;
+	}
+	
+	.about {
+		font-size: 85%;
+	}
+	
+	.about h1 {
+		font-size: 2rem;
 	}
 }
