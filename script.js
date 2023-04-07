@@ -48,12 +48,11 @@ $(function () {
 
 	// Make avatar image height equal to width
 		
-	$('#round').css('width', $('#round').width());
-	$('#round').css('height', $('#round').width());
+	$('#round').css('width', $('#round').width()).css('height', $('#round').width());
 	
 	$(window).resize(function() {
-		$('#round').css('width', $('#round').width());
-		$('#round').css('height', $('#round').width());
+		$('#round').css('width', '').css('height', '')
+			.css('width', $('#round').width()).css('height', $('#round').width());
 	});
 
 	$('#avatar').on('click', function() {
