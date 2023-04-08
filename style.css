@@ -145,6 +145,7 @@ body.dark.background .vcard > .grid-x {
 
 .head .round.text {
 	background-color: rgba(15, 15, 15, 0.1);
+	overflow-y: auto;
 }
 
 body.dark .head .round.text {
