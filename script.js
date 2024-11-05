@@ -80,7 +80,7 @@ $(function () {
 		
 			// Social profile IDs 
 			socials = [
-				'WhatsApp', 'Telegram', 'Viber', 'VK', 'Facebook', 'Instagram', 'Twitter', 'Flickr', 'LinkedIn', 'GitHub',
+				'Telegram', 'WhatsApp', 'Viber', 'VK', 'Facebook', 'Instagram', 'Twitter', 'Flickr', 'LinkedIn', 'GitHub', 'YouTube', 'TradingView',
 			],
 			
 			fields = [
