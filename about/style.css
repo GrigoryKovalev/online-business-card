@@ -19,20 +19,6 @@
 	vertical-align: middle;
 }
 
-@media all and (max-width: 639px) {
-	.about, .example {
-		height: 100%;
-	}
-	
-	.about {
-		font-size: 75%;
-	}
-	
-	.about h1 {
-		font-size: 1.5rem;
-	}
-}
-
 @media all and (max-width: 1278px) {
 	.classic .vcard h1.name {
 		margin-top: 15px;
@@ -48,5 +34,19 @@
 	
 	.about h1 {
 		font-size: 2rem;
+	}
+}
+
+@media all and (max-width: 639px) {
+	.about, .example {
+		height: 100%;
+	}
+	
+	.about {
+		font-size: 75%;
+	}
+	
+	.about h1 {
+		font-size: 1.5rem;
 	}
 }
